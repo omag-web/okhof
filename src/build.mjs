@@ -89,7 +89,9 @@ const NAV = [
   ["/contact/", "Contact"],
 ];
 
-const emblem = `<svg class="emblem" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22.5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="24" cy="24" r="18" fill="none" stroke="currentColor" stroke-width=".75"/><text x="24" y="29.5" text-anchor="middle" font-family="Marcellus, serif" font-size="14" fill="currentColor" letter-spacing="1">OK</text></svg>`;
+const sealImg = (cls, alt = "") => `<img class="${cls}" src="${u("/media/brand/seal.png")}" width="168" height="168" alt="${esc(alt)}">`;
+// The seal set between sections, as on the original site.
+const sealDivider = `<div class="seal-divider" aria-hidden="true"><span></span>${sealImg("seal-divider-img")}<span></span></div>`;
 
 function layout({ title, description, path: p, body, active = "", jsonld = null, ogImage = "", bodyClass = "" }) {
   const fullTitle = title ? `${title} · ${site.shortName}` : site.name;
@@ -109,10 +111,10 @@ function layout({ title, description, path: p, body, active = "", jsonld = null,
 <meta property="og:title" content="${esc(title || site.name)}">
 <meta property="og:description" content="${esc(desc)}">
 <meta property="og:url" content="${canonical}">
-${og ? `<meta property="og:image" content="${esc(og)}">` : ""}
+<meta property="og:image" content="${esc(og || abs("/media/brand/seal.png"))}">
 <meta name="twitter:card" content="summary">
-<meta name="theme-color" content="#1f2a36">
-<link rel="icon" href="${u("/assets/favicon.svg")}" type="image/svg+xml">
+<meta name="theme-color" content="#222222">
+<link rel="icon" href="${u("/assets/favicon.png")}" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -123,7 +125,7 @@ ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="${u("/")}">${emblem}<span class="brand-text"><span class="brand-line">Oklahoma Hall of Fame</span><span class="brand-sub">for City and Town Officials</span></span></a>
+    <a class="brand" href="${u("/")}"><img src="${u("/media/brand/wordmark.webp")}" width="1500" height="224" alt="${esc(site.name)}"></a>
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" class="site-nav" aria-label="Main">
       <ul>${NAV.map(([href, label]) => `<li><a href="${u(href)}"${active === href ? ' aria-current="page"' : ""}>${label}</a></li>`).join("")}</ul>
@@ -135,9 +137,12 @@ ${body}
 </main>
 <footer class="site-footer">
   <div class="wrap footer-grid">
-    <div>
-      <p class="footer-name">${esc(site.name)}</p>
-      <p>${esc(site.contact.street)}<br>${esc(site.contact.city)}, ${site.contact.state} ${site.contact.zip}</p>
+    <div class="footer-id">
+      ${sealImg("footer-seal")}
+      <div>
+        <p class="footer-name">${esc(site.name)}</p>
+        <p>${esc(site.contact.street)}<br>${esc(site.contact.city)}, ${site.contact.state} ${site.contact.zip}</p>
+      </div>
     </div>
     <div>
       <p><a href="tel:${site.contact.phoneHref}">${esc(site.contact.phone)}</a><br><a href="mailto:${site.contact.email}">${esc(site.contact.email)}</a></p>
@@ -211,15 +216,18 @@ function fill(tpl) {
 function buildHome() {
   const latest = byYear[latestYear];
   const body = `
-<section class="hero"><div class="wrap">
-  <h1>Honoring the people who built Oklahoma's cities and towns.</h1>
-  <p class="hero-lede">Since ${site.firstClass}, the Hall of Fame has inducted ${inductees.length} mayors, managers, clerks, council members and public servants whose work strengthened municipal government across the state.</p>
-  <form class="hero-search" action="${u("/inductees/")}" role="search">
-    <label for="hero-q">Find an inductee</label>
-    <div class="search-row"><input id="hero-q" name="q" type="search" placeholder="Name or town" autocomplete="off"><button type="submit">Search</button></div>
-  </form>
-  <p class="hero-browse"><a href="${u("/inductees/")}">Browse all ${inductees.length} inductees</a></p>
-</div></section>
+<section class="hero">
+  <img class="hero-bg" src="${u("/media/brand/hero-dome.webp")}" alt="" fetchpriority="high" decoding="async">
+  <div class="wrap hero-inner">
+    <h1>Honoring the people who built Oklahoma's cities and towns.</h1>
+    <p class="hero-lede">Since ${site.firstClass}, the Hall of Fame has inducted ${inductees.length} mayors, managers, clerks, council members and public servants whose work strengthened municipal government across the state.</p>
+    <form class="hero-search" action="${u("/inductees/")}" role="search">
+      <label for="hero-q">Find an inductee</label>
+      <div class="search-row"><input id="hero-q" name="q" type="search" placeholder="Name or town" autocomplete="off"><button type="submit">Search</button></div>
+    </form>
+    <p class="hero-browse"><a href="${u("/inductees/")}">Browse all ${inductees.length} inductees</a></p>
+  </div>
+</section>
 
 <section class="section latest"><div class="wrap">
   <div class="section-head">
@@ -228,6 +236,8 @@ function buildHome() {
   </div>
   <ul class="cards cards-feature">${latest.map((i) => card(i, { showYear: false })).join("")}</ul>
 </div></section>
+
+${sealDivider}
 
 <section class="section band"><div class="wrap band-grid">
   <div>
