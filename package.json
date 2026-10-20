@@ -1,0 +1,21 @@
+{
+  "name": "ok-city-town-officials-hall-of-fame",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website for the Oklahoma Hall of Fame for City and Town Officials",
+  "type": "module",
+  "scripts": {
+    "build": "node src/build.mjs",
+    "serve": "npx --yes serve dist -l 8080",
+    "dev": "npm run build && npm run serve",
+    "import": "node scripts/import-squarespace.mjs",
+    "photos": "node scripts/fetch-photos.mjs"
+  },
+  "devDependencies": {
+    "fast-xml-parser": "^4.5.0",
+    "sanitize-html": "^2.13.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

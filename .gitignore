@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.DS_Store
+# Squarespace exports include draft content and account emails; keep them out of the public repo.
+*.xml
+!sitemap.xml

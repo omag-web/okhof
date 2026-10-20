@@ -1,0 +1,43 @@
+{
+  "name": "Oklahoma Hall of Fame for City and Town Officials",
+  "shortName": "Oklahoma Municipal Hall of Fame",
+  "tagline": "Recognition for those public officials who have made significant contributions to municipal government in Oklahoma.",
+  "url": "https://www.okcityandtownofficials.org",
+  "basePath": "",
+  "founded": 2000,
+  "firstClass": 2001,
+  "contact": {
+    "person": "Deborah Miner-Gonzales",
+    "role": "Foundation Secretary",
+    "street": "308 Northeast 27th Street",
+    "city": "Oklahoma City",
+    "state": "OK",
+    "zip": "73105",
+    "phone": "(405) 528-7564 ext. 1",
+    "phoneHref": "+14055287564,1",
+    "email": "deborah@meso.org"
+  },
+  "nomination": {
+    "deadline": "June 1",
+    "maxPerYear": 6,
+    "ceremony": "Annual Oklahoma Municipal League Conference banquet",
+    "formPdf": "https://www.okcityandtownofficials.org/s/halloffame-2016.pdf"
+  },
+  "appointingOrgs": [
+    "Municipal Clerks, Treasurers and Financial Officials Association of Oklahoma",
+    "Mayors Conference of Oklahoma",
+    "Oklahoma Municipal Assurance Group",
+    "Oklahoma Municipal League",
+    "City Management Association of Oklahoma"
+  ],
+  "supporters": [
+    "Oklahoma Municipal Alliance",
+    "Oklahoma Municipal Power Authority",
+    "Oklahoma Municipal Retirement Fund"
+  ],
+  "news": [
+    { "title": "2026 inductees announced", "date": "2026-08-01", "label": "August 2026 press release", "url": "https://www.okcityandtownofficials.org/s/Press-Release-Statement-2026.pdf" },
+    { "title": "2025 inductees announced", "date": "2025-08-01", "label": "August 2025 press release", "url": "https://www.okcityandtownofficials.org/s/Press-Release-Statement-2025.pdf" },
+    { "title": "2024 inductees announced", "date": "2024-09-01", "label": "September 2024 press release", "url": "https://www.okcityandtownofficials.org/s/Press-Release-Statement-2024.pdf" }
+  ]
+}
