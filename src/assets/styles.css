@@ -115,10 +115,10 @@ input[type="search"]:focus, select:focus { outline: var(--focus); outline-offset
 .split-copy { border-top: 3px solid var(--taupe); padding-top: 1.5rem; }
 .split-copy h2 { font-size: var(--step-3); }
 .split-copy p { color: var(--ink-soft); margin-bottom: 1.75rem; max-width: 30rem; }
-.cards-trio { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cards.cards-trio { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(.75rem, 2vw, 1.25rem); }
 @media (max-width: 52rem) { .split-grid { grid-template-columns: 1fr; } }
 @media (max-width: 30rem) {
-  .cards-trio { gap: .75rem; }
+  .cards.cards-trio { gap: .6rem; }
   .cards-trio .card-name { font-size: 1rem; }
   .cards-trio .card-role { display: none; }
 }
