@@ -1,39 +1,106 @@
-// Mobile menu, inductee library filtering, and photo lightbox. No dependencies.
+// Mobile menu, home page (random inductees, town map, nomination season), inductee library,
+// speech videos, photo archive and lightbox. No dependencies.
 (function () {
   "use strict";
 
+  var esc = function (t) {
+    return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; });
+  };
+
   /* Mobile menu */
-  var toggle = document.querySelector(".nav-toggle");
-  var nav = document.getElementById("site-nav");
-  if (toggle && nav) {
-    toggle.addEventListener("click", function () {
+  var menuBtn = document.querySelector(".menu-btn");
+  var nav = document.getElementById("hdr-nav");
+  if (menuBtn && nav) {
+    menuBtn.addEventListener("click", function () {
       var open = nav.classList.toggle("open");
-      toggle.setAttribute("aria-expanded", String(open));
-      toggle.textContent = open ? "Close" : "Menu";
+      menuBtn.setAttribute("aria-expanded", String(open));
+      menuBtn.textContent = open ? "Close" : "Menu";
     });
   }
 
-  /* Home page: show three random inductees on every visit */
-  var featured = document.getElementById("featured");
-  var pool = document.getElementById("featured-pool");
-  if (featured && pool) {
-    try {
-      var all = JSON.parse(pool.textContent);
-      for (var k = all.length - 1; k > 0; k--) {
+  /* Home page */
+  var peopleEl = document.getElementById("people");
+  if (peopleEl) {
+    var people = [];
+    try { people = JSON.parse(peopleEl.textContent); } catch (e) { people = []; }
+
+    /* Four random inductees on every visit (the build picks a fallback four) */
+    var pcards = document.getElementById("pcards");
+    var withPhotos = people.filter(function (p) { return p.t; });
+    if (pcards && withPhotos.length >= 4) {
+      for (var k = withPhotos.length - 1; k > 0; k--) {
         var j = Math.floor(Math.random() * (k + 1));
-        var tmp = all[k]; all[k] = all[j]; all[j] = tmp;
+        var tmp = withPhotos[k]; withPhotos[k] = withPhotos[j]; withPhotos[j] = tmp;
       }
-      var esc = function (t) {
-        return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; });
-      };
-      featured.innerHTML = all.slice(0, 3).map(function (i) {
-        return '<li class="card"><a href="' + esc(i.u) + '">' +
-          '<img class="portrait portrait-card" src="' + esc(i.p) + '" alt="Portrait of ' + esc(i.n) + '" decoding="async">' +
-          '<span class="card-body"><span class="card-name">' + esc(i.n) + '</span>' +
-          (i.r ? '<span class="card-role">' + esc(i.r) + '</span>' : '') +
-          '<span class="card-year">Class of ' + esc(i.y) + '</span></span></a></li>';
+      pcards.innerHTML = withPhotos.slice(0, 4).map(function (p) {
+        return '<li class="card pcard"><a href="' + esc(p.u) + '"><span class="pcard-img"><img src="' + esc(p.t) + '" alt="" decoding="async"></span>' +
+          '<span class="pcard-body"><span class="pcard-year">Class of ' + p.y + '</span><span class="pcard-name">' + esc(p.n) + '</span>' +
+          (p.r ? '<span class="pcard-role">' + esc(p.r) + '</span>' : '') + '<span class="pcard-more">View profile</span></span></a></li>';
       }).join("");
-    } catch (e) { /* keep the three chosen at build time */ }
+    }
+
+    /* Find inductees by town */
+    var townTitle = document.getElementById("town-title");
+    var townTop = document.getElementById("town-top");
+    var townPeople = document.getElementById("town-people");
+    var townPanel = document.getElementById("town-panel");
+    var townBack = document.getElementById("town-back");
+    var townDots = Array.prototype.slice.call(document.querySelectorAll(".town"));
+    if (townPanel) {
+      // Bring the panel's top back into view if it has scrolled off screen (on phones it sits under the map)
+      var keepPanelInView = function () {
+        var top = townPanel.getBoundingClientRect().top;
+        if (top < 80 || top > window.innerHeight - 120) townPanel.scrollIntoView({ behavior: "smooth", block: "start" });
+      };
+      var showTown = function (town) {
+        var list = people.filter(function (p) { return p.towns.indexOf(town) !== -1; });
+        townTitle.textContent = town;
+        townTop.hidden = true;
+        townPeople.hidden = false;
+        townPeople.innerHTML = list.map(function (p) {
+          return '<li><a class="town-person" href="' + esc(p.u) + '"><img src="' + esc(p.t) + '" alt="" loading="lazy">' +
+            "<span><strong>" + esc(p.n) + "</strong><span>" + esc(p.r) + ", class of " + p.y + "</span></span></a></li>";
+        }).join("");
+        townPeople.scrollTop = 0;
+        townBack.hidden = false;
+        townDots.forEach(function (d) { d.classList.toggle("is-active", d.dataset.town === town); });
+        keepPanelInView();
+      };
+      var resetTown = function () {
+        townTitle.textContent = "Most represented";
+        townTop.hidden = false;
+        townPeople.hidden = true;
+        townBack.hidden = true;
+        townDots.forEach(function (d) { d.classList.remove("is-active"); });
+        keepPanelInView();
+      };
+      townDots.forEach(function (d) {
+        d.addEventListener("click", function () { showTown(d.dataset.town); });
+        d.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showTown(d.dataset.town); }
+        });
+      });
+      townTop.addEventListener("click", function (e) {
+        var b = e.target.closest("[data-town]");
+        if (b) showTown(b.dataset.town);
+      });
+      townBack.addEventListener("click", function (e) {
+        if (e.target.closest("[data-back]")) resetTown();
+      });
+    }
+
+    /* Nomination season: open January 1 through June 1 */
+    var seasonEl = document.getElementById("season-cta");
+    if (seasonEl) {
+      var now = new Date(), yr = now.getFullYear();
+      var opens = new Date(yr, 0, 1), closes = new Date(yr, 5, 1, 23, 59);
+      if (now >= opens && now <= closes) {
+        var left = Math.ceil((closes - now) / 864e5);
+        seasonEl.textContent = "Nominations are open: " + left + " day" + (left === 1 ? "" : "s") + " left";
+      } else {
+        seasonEl.textContent = "Nominations open January 1, " + (now > closes ? yr + 1 : yr);
+      }
+    }
   }
 
   /* Inductee library */

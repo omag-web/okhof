@@ -4,6 +4,7 @@ The website for the Oklahoma Hall of Fame for City and Town Officials, rebuilt f
 
 - **88 inductees, 24 classes (2001–2025)**, each with a full biography, portrait, and (for 82 of them) their acceptance speech video
 - **Searchable library**: search by name, town, title or anything in the biography; filter by class or last initial
+- **Find inductees by town** on an interactive Oklahoma map on the home page
 - **A page per class** and **a page per inductee**, with prev/next and classmates
 - **130-photo archive** with a keyboard-friendly viewer
 - **Every old Squarespace link still works**: `/past-inductees-1/<old-slug>` and the other old URLs redirect to the new pages
@@ -18,6 +19,7 @@ No framework and no runtime dependencies. One Node script (`src/build.mjs`) turn
 | `data/inductees.json` | **The library.** One entry per inductee. Edit this to add or correct inductees. |
 | `data/site.json` | Organization details: contact, nomination deadline, news/press releases, board organizations, supporters |
 | `data/photos.json` | The photo archive (add captions here) |
+| `data/towns.json` | Towns each inductee served (drives the home page map and town search) and town coordinates |
 | `content/history.html`, `content/nominate.html` | Body copy for the History and Nominate pages |
 | `src/build.mjs` | Site generator: page templates live here |
 | `src/assets/` | `styles.css`, `site.js` (search, menu, lightbox, video), favicon |

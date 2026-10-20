@@ -5,8 +5,6 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { buildConcept } from "./concept.mjs";
-import { buildConcept3 } from "./concept3.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
@@ -80,18 +78,18 @@ const byYear = Object.fromEntries(years.map((y) => [y, inductees.filter((i) => i
 const latestYear = years[0];
 const photos = readJSON("data/photos.json", []);
 const pages = readJSON("data/pages.json", {}); // optional overrides from the Squarespace import
+// Towns each inductee served, for the home page map and search (data/towns.json)
+const townData = readJSON("data/towns.json", { towns: {}, inductees: {} });
+const townsOf = (i) => townData.inductees[i.slug]?.towns || [];
+// Small 4:5 portrait for cards; the full photo is used on the inductee page
+const thumbFor = (i) => (fs.existsSync(path.join(ROOT, "media/thumbs", `${i.slug}.webp`)) ? u(`/media/thumbs/${i.slug}.webp`) : i.photoSrc);
 
 /* ---------- shared chrome ---------- */
 const NAV = [
   ["/inductees/", "Inductees"],
   ["/history/", "History"],
-  ["/nominate/", "Nominate"],
   ["/photos/", "Photos"],
-  ["/news/", "News"],
-  ["/contact/", "Contact"],
 ];
-
-const sealImg = (cls, alt = "") => `<img class="${cls}" src="${u("/media/brand/seal.png")}" width="168" height="168" alt="${esc(alt)}">`;
 
 function layout({ title, description, path: p, body, active = "", jsonld = null, ogImage = "", bodyClass = "" }) {
   const fullTitle = title ? `${title} · ${site.shortName}` : site.name;
@@ -117,40 +115,36 @@ function layout({ title, description, path: p, body, active = "", jsonld = null,
 <link rel="icon" href="${u("/assets/favicon.png")}" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="${u("/assets/styles.css")}">
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld)}</script>` : ""}
 </head>
 <body class="${bodyClass}">
 <a class="skip" href="#main">Skip to content</a>
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="${u("/")}"><img src="${u("/media/brand/wordmark.webp")}" width="1500" height="224" alt="${esc(site.name)}"></a>
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
-    <nav id="site-nav" class="site-nav" aria-label="Main">
-      <ul>${NAV.map(([href, label]) => `<li><a href="${u(href)}"${active === href ? ' aria-current="page"' : ""}>${label}</a></li>`).join("")}</ul>
+<header class="hdr">
+  <div class="wrap hdr-inner">
+    <a class="hdr-brand" href="${u("/")}"><img class="hdr-word" src="${u("/media/brand/wordmark.webp")}" width="1500" height="224" alt="${esc(site.name)}"></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="hdr-nav">Menu</button>
+    <nav class="hdr-nav" id="hdr-nav" aria-label="Main">
+      ${NAV.map(([href, label]) => `<a href="${u(href)}"${active === href ? ' aria-current="page"' : ""}>${label}</a>`).join("")}
+      <a class="btn btn-solid hdr-cta" href="${u("/nominate/")}"${active === "/nominate/" ? ' aria-current="page"' : ""}>Nominate</a>
     </nav>
   </div>
 </header>
 <main id="main">
 ${body}
 </main>
-<footer class="site-footer">
-  <div class="wrap footer-grid">
-    <div class="footer-id">
-      ${sealImg("footer-seal")}
-      <div>
-        <p class="footer-name">${esc(site.name)}</p>
-        <p>${esc(site.contact.street)}<br>${esc(site.contact.city)}, ${site.contact.state} ${site.contact.zip}</p>
-      </div>
+<footer class="ftr">
+  <div class="wrap ftr-grid">
+    <div class="ftr-brand">
+      <img src="${u("/media/brand/seal.png")}" width="168" height="168" alt="">
+      <p>${esc(site.name)}</p>
     </div>
-    <div>
-      <p><a href="tel:${site.contact.phoneHref}">${esc(site.contact.phone)}</a><br><a href="mailto:${site.contact.email}">${esc(site.contact.email)}</a></p>
-      <p>Nominations close ${esc(site.nomination.deadline)} each year. <a href="${u("/nominate/")}">How to nominate</a></p>
-    </div>
-    <nav aria-label="Footer"><ul>${NAV.map(([href, label]) => `<li><a href="${u(href)}">${label}</a></li>`).join("")}</ul></nav>
+    <div><h3>Visit us</h3><p>${esc(site.contact.street)}<br>${esc(site.contact.city)}, ${site.contact.state} ${site.contact.zip}</p></div>
+    <div><h3>Contact</h3><p>${esc(site.contact.person)}, ${esc(site.contact.role)}<br><a href="tel:${site.contact.phoneHref}">${esc(site.contact.phone)}</a><br><a href="mailto:${site.contact.email}">${esc(site.contact.email)}</a></p></div>
+    <div><h3>Explore</h3><ul><li><a href="${u("/inductees/")}">Inductees</a></li><li><a href="${u("/history/")}">History</a></li><li><a href="${u("/nominate/")}">Nominate</a></li><li><a href="${u("/photos/")}">Photos</a></li><li><a href="${u("/news/")}">News</a></li><li><a href="${u("/contact/")}">Contact</a></li></ul></div>
   </div>
-  <div class="wrap footer-base"><p>© ${BUILD_YEAR} ${esc(site.name)}, a not-for-profit foundation established in ${site.founded}.</p></div>
+  <div class="wrap ftr-base"><p>© ${BUILD_YEAR} ${esc(site.name)}, a not-for-profit foundation established in ${site.founded}.</p></div>
 </footer>
 <script src="${u("/assets/site.js")}" defer></script>
 </body>
@@ -159,10 +153,9 @@ ${body}
 
 /* ---------- components ---------- */
 function portrait(i, size = "card") {
-  if (i.photoSrc) {
-    return `<img class="portrait portrait-${size}" src="${esc(i.photoSrc)}" alt="Portrait of ${esc(i.name)}" loading="lazy" decoding="async">`;
-  }
-  return `<div class="portrait portrait-${size} monogram" aria-hidden="true"><span>${esc(initials(i.name))}</span></div>`;
+  const src = size === "card" ? thumbFor(i) : i.photoSrc;
+  if (src) return `<img src="${esc(src)}" alt="${size === "card" ? "" : `Portrait of ${esc(i.name)}`}" loading="lazy" decoding="async">`;
+  return `<div class="monogram" aria-hidden="true"><span>${esc(initials(i.name))}</span></div>`;
 }
 function videoBlock(i) {
   if (!i.videos?.length) return "";
@@ -179,14 +172,16 @@ function role(i) {
   return [i.title, i.city].filter(Boolean).join(", ");
 }
 function card(i, { showYear = true } = {}) {
-  const search = [i.name, i.city, i.title, i.year, stripTags(i.bioHtml || "").slice(0, 700)].join(" ").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ");
-  return `<li class="card" data-year="${i.year}" data-name="${esc(i.sortName.toLowerCase())}" data-letter="${esc(i.sortName[0].toUpperCase())}" data-search="${esc(search)}">
+  const search = [i.name, i.city, i.title, i.year, townsOf(i).join(" "), stripTags(i.bioHtml || "").slice(0, 700)].join(" ").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ");
+  const label = showYear ? `Class of ${i.year}${i.posthumous ? ", posthumous" : ""}` : i.posthumous ? "Posthumous" : "";
+  return `<li class="card pcard" data-year="${i.year}" data-name="${esc(i.sortName.toLowerCase())}" data-letter="${esc(i.sortName[0].toUpperCase())}" data-search="${esc(search)}">
   <a href="${i.url}">
-    ${portrait(i)}
-    <span class="card-body">
-      <span class="card-name">${esc(i.name)}</span>
-      ${role(i) ? `<span class="card-role">${esc(role(i))}</span>` : ""}
-      ${showYear ? `<span class="card-year">Class of ${i.year}</span>` : ""}
+    <span class="pcard-img">${portrait(i)}</span>
+    <span class="pcard-body">
+      ${label ? `<span class="pcard-year">${label}</span>` : ""}
+      <span class="pcard-name">${esc(i.name)}</span>
+      ${role(i) ? `<span class="pcard-role">${esc(role(i))}</span>` : ""}
+      <span class="pcard-more">View profile</span>
     </span>
   </a>
 </li>`;
@@ -220,31 +215,102 @@ function pickRandom(list, n) {
 }
 
 function buildHome() {
+  const arch = (name) => u(`/media/archive/${name}`);
+  // ---- Map of towns: equirectangular projection corrected for Oklahoma's latitude ----
+  const LON0 = -103.15, LAT0 = 37.12, KX = 81.5, KY = 100;
+  const px = (lon) => +((lon - LON0) * KX).toFixed(1);
+  const py = (lat) => +((LAT0 - lat) * KY).toFixed(1);
+  const outline = [
+    [-103.002, 37.0], [-94.618, 37.0], [-94.618, 36.5], [-94.55, 35.9], [-94.43, 35.39], [-94.46, 34.5], [-94.485, 33.64],
+    [-94.9, 33.82], [-95.3, 33.87], [-95.8, 33.86], [-96.15, 33.82], [-96.6, 33.85], [-96.95, 33.75], [-97.15, 33.72],
+    [-97.6, 33.92], [-98.05, 34.12], [-98.5, 34.14], [-98.95, 34.21], [-99.25, 34.37], [-99.6, 34.38], [-100.0, 34.56],
+    [-100.0, 36.5], [-103.002, 36.5],
+  ];
+  const outlinePath = "M" + outline.map(([lon, lat]) => `${px(lon)},${py(lat)}`).join("L") + "Z";
+  const townCounts = {};
+  for (const i of inductees) for (const t of townsOf(i)) townCounts[t] = (townCounts[t] || 0) + 1;
+  const mapped = Object.entries(townCounts).filter(([t]) => townData.towns[t]);
+  const dots = mapped.sort((a, b) => a[1] - b[1]).map(([t, n]) => {
+    const [lat, lon] = townData.towns[t];
+    const r = (3.4 + Math.sqrt(n) * 2.7).toFixed(1);
+    return `<g class="town" tabindex="0" role="button" data-town="${esc(t)}" aria-label="${esc(t)}: ${n} inductee${n === 1 ? "" : "s"}"><circle cx="${px(lon)}" cy="${py(lat)}" r="${r}"></circle></g>`;
+  }).join("");
+  const MW = px(-94.3), MH = py(33.5);
+  const topTowns = [...mapped].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 8);
+  const people = inductees.map((i) => ({ n: i.name, u: i.url, t: thumbFor(i), r: role(i), y: i.year, towns: townsOf(i) }));
+
   const body = `
 <section class="hero">
-  <img class="hero-bg" src="${u("/media/brand/hero-dome.webp")}" alt="" fetchpriority="high" decoding="async">
+  <img class="hero-bg" src="${u("/media/brand/hero-dome.webp")}" alt="" fetchpriority="high">
   <div class="wrap hero-inner">
-    <h1>Honoring the people who built Oklahoma's cities and towns.</h1>
-    <p class="hero-lede">Since ${site.firstClass}, the Hall of Fame has honored the mayors, managers, clerks, council members and public servants whose work strengthened municipal government across the state.</p>
-    <form class="hero-search" action="${u("/inductees/")}" role="search">
-      <label for="hero-q">Find an inductee</label>
-      <div class="search-row"><input id="hero-q" name="q" type="search" placeholder="Name or town" autocomplete="off"><button type="submit">Search</button></div>
-    </form>
-    <p class="hero-browse"><a href="${u("/inductees/")}">Browse all inductees</a></p>
+    <p class="kicker">${esc(site.name)}</p>
+    <h1>Honoring the leaders who built Oklahoma's cities and towns</h1>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="${u("/inductees/")}">Explore the inductees</a>
+      <a class="btn btn-ghost" href="${u("/nominate/")}">Nominate someone</a>
+    </div>
   </div>
 </section>
 
-<section class="section intro-split"><div class="wrap split-grid">
-  <div class="split-copy">
-    <h2>Know someone who belongs here?</h2>
-    <p>Nominations are open to anyone who has served an Oklahoma city, town, public trust or municipal organization with distinction and unquestioned ethics. Up to ${site.nomination.maxPerYear} officials are inducted each year, and nominations close ${esc(site.nomination.deadline)}.</p>
-    <a class="button" href="${u("/nominate/")}">How to nominate</a>
+<section class="townmap" id="towns" aria-labelledby="towns-title">
+  <div class="wrap townmap-grid">
+    <div class="townmap-map">
+      <p class="kicker kicker-dark">Across the state</p>
+      <h2 id="towns-title">Find inductees by town</h2>
+      <p class="townmap-lede">Inductees have served communities in every corner of Oklahoma. Choose a town on the map.</p>
+      <svg class="ok-map" viewBox="0 0 ${MW} ${MH}" role="group" aria-label="Map of Oklahoma towns with inductees">
+        <path class="ok-shape" d="${outlinePath}"></path>
+        ${dots}
+      </svg>
+    </div>
+    <div class="town-panel" id="town-panel" aria-live="polite">
+      <h3 class="town-title" id="town-title">Most represented</h3>
+      <ul class="town-top" id="town-top">${topTowns.map(([t, n]) => `<li><button type="button" class="town-link" data-town="${esc(t)}"><span>${esc(t)}</span><span>${n}</span></button></li>`).join("")}</ul>
+      <ul class="town-people" id="town-people" hidden></ul>
+      <p class="town-back-row" id="town-back" hidden><button type="button" class="linklike" data-back>Back to all towns</button></p>
+    </div>
   </div>
-  <div class="split-featured">
-    <ul class="cards cards-trio" id="featured">${pickRandom(inductees.filter((i) => i.photoSrc), 3).map((i) => card(i)).join("")}</ul>
-    <script type="application/json" id="featured-pool">${JSON.stringify(inductees.filter((i) => i.photoSrc).map((i) => ({ n: i.name, u: i.url, p: i.photoSrc, r: role(i), y: i.year }))).replace(/</g, "\\u003c")}</script>
+</section>
+
+<section class="legends">
+  <div class="wrap legends-grid">
+    <figure class="legends-img"><img src="${arch("098-dsc_0393.jpg")}" alt="Hall of Fame inductees seated and standing together" loading="lazy"></figure>
+    <div class="legends-copy">
+      <p class="kicker kicker-dark">Since ${site.firstClass}</p>
+      <h2>Oklahoma's municipal legends</h2>
+      <p>The Hall of Fame recognizes public officials whose work strengthened city and town government across the state. Every inductee was nominated by peers and chosen by a board appointed by five of Oklahoma's municipal associations.</p>
+      <a class="btn btn-dark" href="${u("/history/")}">Our history</a>
+    </div>
   </div>
-</div></section>`;
+</section>
+
+<section class="meet">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Meet the inductees</h2>
+      <a class="btn btn-outline" href="${u("/inductees/")}">View all</a>
+    </div>
+    <ul class="cards pcards" id="pcards">${pickRandom(inductees.filter((i) => i.photoSrc), 4).map((i) => card(i)).join("")}</ul>
+  </div>
+</section>
+
+<section class="cta">
+  <img class="cta-bg" src="${arch("068-cz2d2084.jpg")}" alt="" loading="lazy">
+  <div class="wrap cta-inner">
+    <p class="kicker" id="season-cta">Nominations close ${esc(site.nomination.deadline)} each year</p>
+    <h2>Know someone who belongs in the Hall?</h2>
+    <p>Any elected, appointed or professional official who served an Oklahoma city, town, public trust or municipal organization with distinction can be nominated.</p>
+    <a class="btn btn-solid" href="${u("/nominate/")}">Start a nomination</a>
+  </div>
+</section>
+
+<section class="partners" aria-labelledby="partners-title">
+  <div class="wrap">
+    <h2 id="partners-title">Governed and supported by Oklahoma's municipal organizations</h2>
+    <ul class="partner-list">${[...site.appointingOrgs, ...site.supporters].map((o) => `<li>${esc(o)}</li>`).join("")}</ul>
+  </div>
+</section>
+<script type="application/json" id="people">${JSON.stringify(people).replace(/</g, "\\u003c")}</script>`;
   write("index.html", layout({
     title: "", path: "/", body, bodyClass: "home",
     jsonld: { "@context": "https://schema.org", "@type": "Organization", name: site.name, url: site.url, foundingDate: String(site.founded), email: site.contact.email, telephone: site.contact.phone, address: { "@type": "PostalAddress", streetAddress: site.contact.street, addressLocality: site.contact.city, addressRegion: site.contact.state, postalCode: site.contact.zip, addressCountry: "US" } },
@@ -256,14 +322,14 @@ function buildLibrary() {
   const body = `${pageHead("Inductees", `Every official honored since ${site.firstClass}. Search by name, town or title, or browse by class.`)}
 <section class="section library"><div class="wrap">
   <form class="filters" role="search" aria-controls="results" onsubmit="return false">
-    <div class="field field-q"><label for="q">Search</label><input id="q" name="q" type="search" placeholder="Name, city or title" autocomplete="off"></div>
+    <div class="field field-q"><label for="q">Search</label><input id="q" name="q" type="search" placeholder="Name, town or title" autocomplete="off"></div>
     <div class="field"><label for="year">Class</label><select id="year" name="year"><option value="">All classes</option>${years.map((y) => `<option value="${y}">${y}</option>`).join("")}</select></div>
     <div class="field"><label for="sort">Sort</label><select id="sort" name="sort"><option value="class">Newest class first</option><option value="name">Last name, A–Z</option></select></div>
   </form>
   <nav class="letters" aria-label="Filter by last name"><button type="button" data-letter="" aria-pressed="true">All</button>${letters.map((l) => `<button type="button" data-letter="${l}" aria-pressed="false">${l}</button>`).join("")}</nav>
   <p class="result-count" id="count" aria-live="polite"></p>
   <ul class="cards" id="results">${inductees.map((i) => card(i)).join("")}</ul>
-  <p class="empty" id="empty" hidden>No inductees match that search. Try a last name or a city, or <button type="button" class="linklike" id="reset">clear the filters</button>.</p>
+  <p class="empty" id="empty" hidden>No inductees match that search. Try a last name or a town. <button type="button" class="linklike" id="reset">Clear the filters</button></p>
 </div></section>`;
   write("inductees/index.html", layout({ title: "Inductees", description: `Browse every inductee of the ${site.name} since ${site.firstClass}.`, path: "/inductees/", body, active: "/inductees/", bodyClass: "page-library" }));
 }
@@ -273,7 +339,7 @@ function buildClasses() {
     const newer = years[idx - 1], older = years[idx + 1];
     const body = `${pageHead(`Class of ${y}`, plural(byYear[y].length, "inductee") + ".", [["/inductees/", "Inductees"]])}
 <section class="section"><div class="wrap">
-  <ul class="cards cards-feature">${byYear[y].map((i) => card(i, { showYear: false })).join("")}</ul>
+  <ul class="cards">${byYear[y].map((i) => card(i, { showYear: false })).join("")}</ul>
   <nav class="pager" aria-label="Other classes">
     ${older ? `<a rel="prev" href="${u(`/class/${older}/`)}"><span>Earlier class</span>${older}</a>` : "<span></span>"}
     ${newer ? `<a rel="next" href="${u(`/class/${newer}/`)}"><span>Later class</span>${newer}</a>` : "<span></span>"}
@@ -296,7 +362,7 @@ function buildInductees() {
   <div class="plaque">
     <div class="plaque-photo">${portrait(i, "large")}</div>
     <header class="plaque-head">
-      <p class="plaque-class"><a href="${u(`/class/${i.year}/`)}">Inducted ${i.year}</a>${i.posthumous ? ", posthumously" : ""}</p>
+      <p class="plaque-class label"><a href="${u(`/class/${i.year}/`)}">Class of ${i.year}</a>${i.posthumous ? ", inducted posthumously" : ""}</p>
       <h1>${esc(i.name)}</h1>
       ${role(i) ? `<p class="plaque-role">${esc(role(i))}</p>` : ""}
     </header>
@@ -319,14 +385,14 @@ function buildInductees() {
 
 function buildContentPage(key, file, title, intro, active) {
   const html = pages[key]?.html || fill(read(file));
-  const body = `${pageHead(title, intro)}<section class="section"><div class="wrap narrow prose">${html}</div></section>`;
+  const body = `${pageHead(title, intro)}<section class="section"><div class="wrap"><div class="prose">${html}</div></div></section>`;
   write(`${key}/index.html`, layout({ title, description: intro ? stripTags(intro) : "", path: `/${key}/`, body, active }));
 }
 
 function buildNews() {
   const body = `${pageHead("News", "Announcements of each year's inductees.")}
-<section class="section"><div class="wrap narrow">
-  <ul class="news-list">${site.news.map((n) => `<li><time datetime="${n.date}">${fmtDate(n.date)}</time><h2><a href="${esc(n.url)}">${esc(n.title)}</a></h2><p>${esc(n.label)} (PDF)</p></li>`).join("")}</ul>
+<section class="section"><div class="wrap">
+  <ul class="news-list">${site.news.map((n) => `<li><time class="label" datetime="${n.date}">${fmtDate(n.date)}</time><h2><a href="${esc(n.url)}">${esc(n.title)}</a></h2><p>${esc(n.label)} (PDF)</p></li>`).join("")}</ul>
 </div></section>`;
   write("news/index.html", layout({ title: "News", path: "/news/", body, active: "/news/" }));
 }
@@ -343,7 +409,7 @@ function buildPhotos() {
   const body = `${pageHead("Photo archive", "Photos from past induction ceremonies and the Hall of Fame wall. Select a photo to see it full size.")}
 <section class="section"><div class="wrap">
   ${photos.length ? `<div class="masonry" id="gallery" data-batch="${BATCH}">${items}</div>
-  ${photos.length > BATCH ? `<p class="gallery-more"><button type="button" class="button" id="gallery-more">Show more photos</button></p>` : ""}` : `<p>The photo archive is being moved over.</p>`}
+  ${photos.length > BATCH ? `<p class="gallery-more"><button type="button" class="btn btn-dark" id="gallery-more">Show more photos</button></p>` : ""}` : `<p>The photo archive is being moved over.</p>`}
 </div></section>
 <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
   <figure><img alt=""><figcaption></figcaption></figure>
@@ -355,8 +421,8 @@ function buildPhotos() {
 function buildContact() {
   const c = site.contact;
   const body = `${pageHead("Contact", "Questions about nominations, inductees or the foundation go to the Foundation Secretary.")}
-<section class="section"><div class="wrap narrow"><div class="contact-card">
-  <p class="contact-name">${esc(c.person)}<span>${esc(c.role)}</span></p>
+<section class="section"><div class="wrap"><div class="contact-card">
+  <p class="contact-name">${esc(c.person)}<span class="label">${esc(c.role)}</span></p>
   <dl>
     <dt>Phone</dt><dd><a href="tel:${c.phoneHref}">${esc(c.phone)}</a></dd>
     <dt>Email</dt><dd><a href="mailto:${c.email}">${esc(c.email)}</a></dd>
@@ -368,7 +434,7 @@ function buildContact() {
 
 function build404() {
   const body = `${pageHead("Page not found", "That page isn't here. If you followed an old link to an inductee, try searching the library.")}
-<section class="section"><div class="wrap narrow"><form class="hero-search" action="${u("/inductees/")}" role="search"><label for="nf-q">Find an inductee</label><div class="search-row"><input id="nf-q" name="q" type="search" placeholder="Name or city"><button type="submit">Search</button></div></form></div></section>`;
+<section class="section"><div class="wrap"><form class="search-404" action="${u("/inductees/")}" role="search"><label class="search-label" for="nf-q">Find an inductee</label><div class="search-row"><input id="nf-q" name="q" type="search" placeholder="Name or town"><button class="btn btn-solid" type="submit">Search</button></div></form></div></section>`;
   write("404.html", layout({ title: "Page not found", path: "/404.html", body }));
 }
 
@@ -379,6 +445,8 @@ function buildRedirects() {
     "home-1": "/", "past-inductees": "/inductees/", "past-inductees-1": "/inductees/",
     "nomination-information": "/nominate/", "pages/nomination-information": "/nominate/",
     "contact-us": "/contact/", "new-folder": "/news/",
+    // retired design previews
+    "concept": "/", "concept-3": "/",
   };
   for (const [from, to] of Object.entries(map)) write(`${from}/index.html`, stub(to));
   for (const y of years) write(`past-inductees-1/tag/${y}/index.html`, stub(`/class/${y}/`));
@@ -408,8 +476,6 @@ buildContentPage("nominate", "content/nominate.html", "Nominate someone", "How t
 buildNews();
 buildPhotos();
 buildContact();
-buildConcept({ ROOT, site, inductees, years, u, esc, stripTags, write, role });
-buildConcept3({ ROOT, site, inductees, years, u, esc, write, role });
 build404();
 if (!PREVIEW) {
   buildRedirects();
