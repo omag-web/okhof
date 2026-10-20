@@ -92,10 +92,11 @@ export function buildConcept3({ ROOT, site, inductees, years, u, esc, write, rol
         ${dots}
       </svg>
     </div>
-    <div class="town-panel" aria-live="polite">
+    <div class="town-panel" id="town-panel" aria-live="polite">
       <h3 class="town-title" id="town-title">Most represented</h3>
       <ul class="town-top" id="town-top">${topTowns.map(([t, n]) => `<li><button type="button" class="town-link" data-town="${esc(t)}"><span>${esc(t)}</span><span>${n}</span></button></li>`).join("")}</ul>
       <ul class="town-people" id="town-people" hidden></ul>
+      <p class="town-back-row" id="town-back" hidden><button type="button" class="linklike" data-back>Back to all towns</button></p>
     </div>
   </div>
 </section>

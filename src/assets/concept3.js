@@ -28,6 +28,8 @@
   var townTitle = document.getElementById("town-title");
   var townTop = document.getElementById("town-top");
   var townPeople = document.getElementById("town-people");
+  var townPanel = document.getElementById("town-panel");
+  var townBack = document.getElementById("town-back");
   var townDots = Array.prototype.slice.call(document.querySelectorAll(".town"));
   function showTown(town) {
     var list = people.filter(function (p) { return p.towns.indexOf(town) !== -1; });
@@ -37,14 +39,24 @@
     townPeople.innerHTML = list.map(function (p) {
       return '<li><a class="town-person" href="' + esc(p.u) + '"><img src="' + esc(p.t) + '" alt="" loading="lazy">' +
         "<span><strong>" + esc(p.n) + "</strong><span>" + esc(p.r) + ", class of " + p.y + "</span></span></a></li>";
-    }).join("") + '<li class="town-back"><button type="button" class="linklike" data-back>All towns</button></li>';
+    }).join("");
+    townPeople.scrollTop = 0;
+    townBack.hidden = false;
     townDots.forEach(function (d) { d.classList.toggle("is-active", d.dataset.town === town); });
+    keepPanelInView();
+  }
+  // Bring the panel's top back into view if it has scrolled off screen (e.g. on phones, where it sits under the map)
+  function keepPanelInView() {
+    var top = townPanel.getBoundingClientRect().top;
+    if (top < 80 || top > window.innerHeight - 120) townPanel.scrollIntoView({ behavior: "smooth", block: "start" });
   }
   function resetTown() {
     townTitle.textContent = "Most represented";
     townTop.hidden = false;
     townPeople.hidden = true;
+    townBack.hidden = true;
     townDots.forEach(function (d) { d.classList.remove("is-active"); });
+    keepPanelInView();
   }
   townDots.forEach(function (d) {
     d.addEventListener("click", function () { showTown(d.dataset.town); });
@@ -56,7 +68,7 @@
     var b = e.target.closest("[data-town]");
     if (b) showTown(b.dataset.town);
   });
-  townPeople.addEventListener("click", function (e) {
+  townBack.addEventListener("click", function (e) {
     if (e.target.closest("[data-back]")) resetTown();
   });
 

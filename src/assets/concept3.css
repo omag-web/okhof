@@ -90,9 +90,12 @@ p { margin: 0 0 1em; }
 .town:hover circle, .town:focus-visible circle { fill: var(--charcoal); fill-opacity: 1; }
 .town:focus-visible { outline: none; }
 .town.is-active circle { fill: var(--charcoal); fill-opacity: 1; stroke: var(--taupe-light); stroke-width: 3; }
-.town-panel { background: var(--stone); border-top: 4px solid var(--taupe); padding: 1.5rem 1.6rem 1.75rem; min-height: 22rem; }
+.town-panel { background: var(--stone); border-top: 4px solid var(--taupe); padding: 1.5rem 1.6rem 1.75rem; min-height: 22rem; scroll-margin-top: 6.5rem; }
 .town-title { font-size: 1.9rem; margin-bottom: .75rem; }
 .town-top, .town-people { list-style: none; margin: 0; padding: 0; }
+/* Long towns scroll inside the panel so it never outgrows the map */
+.town-people { max-height: min(30rem, 62vh); overflow-y: auto; overscroll-behavior: contain; padding-right: .5rem; scrollbar-width: thin; scrollbar-color: var(--taupe) transparent; }
+.town-back-row { padding-top: 1rem; border-top: 1px solid var(--rule); margin-top: .25rem; }
 .town-link { display: flex; justify-content: space-between; width: 100%; background: none; border: 0; border-bottom: 1px solid var(--rule); padding: .75rem 0; font: 600 1.15rem var(--head); text-transform: uppercase; letter-spacing: .04em; color: var(--charcoal); cursor: pointer; text-align: left; }
 .town-link span:last-child { color: var(--taupe-deep); font-variant-numeric: tabular-nums; }
 .town-link:hover span:first-child { color: var(--taupe-deep); }
