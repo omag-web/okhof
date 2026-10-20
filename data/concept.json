@@ -1,0 +1,1018 @@
+{
+ "roles": [
+  [
+   "mayor",
+   "Mayors and councils"
+  ],
+  [
+   "manager",
+   "City managers"
+  ],
+  [
+   "finance",
+   "Clerks, treasurers and finance"
+  ],
+  [
+   "attorney",
+   "Attorneys"
+  ],
+  [
+   "safety",
+   "Police and fire"
+  ],
+  [
+   "utilities",
+   "Utilities and public works"
+  ],
+  [
+   "statewide",
+   "Statewide organizations"
+  ]
+ ],
+ "towns": {
+  "Lawton": [
+   34.61,
+   -98.39
+  ],
+  "Sand Springs": [
+   36.14,
+   -96.11
+  ],
+  "Ponca City": [
+   36.71,
+   -97.09
+  ],
+  "Stillwater": [
+   36.12,
+   -97.06
+  ],
+  "Enid": [
+   36.4,
+   -97.88
+  ],
+  "Midwest City": [
+   35.45,
+   -97.4
+  ],
+  "Edmond": [
+   35.65,
+   -97.48
+  ],
+  "Mannford": [
+   36.13,
+   -96.35
+  ],
+  "Oklahoma City": [
+   35.47,
+   -97.52
+  ],
+  "El Reno": [
+   35.53,
+   -97.95
+  ],
+  "Norman": [
+   35.22,
+   -97.44
+  ],
+  "Piedmont": [
+   35.64,
+   -97.75
+  ],
+  "Yukon": [
+   35.51,
+   -97.76
+  ],
+  "Stilwell": [
+   35.81,
+   -94.63
+  ],
+  "Pryor": [
+   36.31,
+   -95.32
+  ],
+  "Tahlequah": [
+   35.92,
+   -94.97
+  ],
+  "Choctaw": [
+   35.5,
+   -97.27
+  ],
+  "Blackwell": [
+   36.8,
+   -97.28
+  ],
+  "Owasso": [
+   36.27,
+   -95.85
+  ],
+  "Clinton": [
+   35.52,
+   -98.97
+  ],
+  "Bethany": [
+   35.52,
+   -97.63
+  ],
+  "Poteau": [
+   35.05,
+   -94.62
+  ],
+  "Okmulgee": [
+   35.62,
+   -95.96
+  ],
+  "Morris": [
+   35.61,
+   -95.86
+  ],
+  "Broken Bow": [
+   34.03,
+   -94.74
+  ],
+  "Collinsville": [
+   36.36,
+   -95.84
+  ],
+  "Mangum": [
+   34.88,
+   -99.5
+  ],
+  "Coweta": [
+   35.95,
+   -95.65
+  ],
+  "Perry": [
+   36.29,
+   -97.29
+  ],
+  "West Siloam Springs": [
+   36.19,
+   -94.63
+  ],
+  "Granite": [
+   34.96,
+   -99.38
+  ],
+  "Woodward": [
+   36.43,
+   -99.39
+  ],
+  "Anadarko": [
+   35.07,
+   -98.24
+  ],
+  "Tonkawa": [
+   36.68,
+   -97.31
+  ],
+  "Earlsboro": [
+   35.33,
+   -96.8
+  ],
+  "Weatherford": [
+   35.53,
+   -98.71
+  ],
+  "Del City": [
+   35.44,
+   -97.44
+  ],
+  "Seminole": [
+   35.22,
+   -96.67
+  ],
+  "Ada": [
+   34.77,
+   -96.68
+  ],
+  "Jenks": [
+   36.02,
+   -95.97
+  ],
+  "Ardmore": [
+   34.17,
+   -97.14
+  ],
+  "Frederick": [
+   34.39,
+   -99.02
+  ],
+  "The Village": [
+   35.56,
+   -97.55
+  ],
+  "Guthrie": [
+   35.88,
+   -97.43
+  ],
+  "Chickasha": [
+   35.05,
+   -97.94
+  ],
+  "Bixby": [
+   35.94,
+   -95.88
+  ],
+  "Hobart": [
+   35.03,
+   -99.09
+  ],
+  "Chandler": [
+   35.7,
+   -96.88
+  ],
+  "Watonga": [
+   35.84,
+   -98.41
+  ],
+  "Walters": [
+   34.36,
+   -98.31
+  ],
+  "Duncan": [
+   34.5,
+   -97.96
+  ],
+  "Shawnee": [
+   35.33,
+   -96.93
+  ],
+  "Guymon": [
+   36.68,
+   -101.48
+  ],
+  "Tulsa": [
+   36.15,
+   -95.99
+  ],
+  "Coalgate": [
+   34.54,
+   -96.22
+  ],
+  "Braman": [
+   36.92,
+   -97.33
+  ],
+  "Broken Arrow": [
+   36.05,
+   -95.79
+  ],
+  "Bartlesville": [
+   36.75,
+   -95.98
+  ]
+ },
+ "inductees": {
+  "david-davis": {
+   "towns": [],
+   "roles": [
+    "attorney",
+    "statewide"
+   ]
+  },
+  "janice-l-almy": {
+   "towns": [
+    "Sand Springs"
+   ],
+   "roles": [
+    "finance"
+   ]
+  },
+  "rusty-whisenhunt": {
+   "towns": [
+    "Lawton"
+   ],
+   "roles": [
+    "utilities"
+   ]
+  },
+  "chris-henderson": {
+   "towns": [
+    "Stillwater",
+    "Enid",
+    "Ponca City"
+   ],
+   "roles": [
+    "manager"
+   ]
+  },
+  "tim-lyon": {
+   "towns": [
+    "Edmond",
+    "Midwest City"
+   ],
+   "roles": [
+    "manager"
+   ]
+  },
+  "tyler-buttram": {
+   "towns": [
+    "Mannford"
+   ],
+   "roles": [
+    "mayor",
+    "finance"
+   ]
+  },
+  "bill-tackett": {
+   "towns": [],
+   "roles": [
+    "statewide"
+   ]
+  },
+  "jon-woods": {
+   "towns": [
+    "Oklahoma City"
+   ],
+   "roles": [
+    "attorney",
+    "statewide"
+   ]
+  },
+  "larry-stevens": {
+   "towns": [
+    "Edmond"
+   ],
+   "roles": [
+    "manager"
+   ]
+  },
+  "patty-j-dixon": {
+   "towns": [
+    "Sand Springs"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "matt-white": {
+   "towns": [
+    "El Reno"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "phillip-johnston": {
+   "towns": [
+    "Ponca City"
+   ],
+   "roles": [
+    "utilities"
+   ]
+  },
+  "daniel-bradley": {
+   "towns": [
+    "Sand Springs"
+   ],
+   "roles": [
+    "safety",
+    "manager"
+   ]
+  },
+  "james-crosby": {
+   "towns": [
+    "Norman",
+    "Piedmont",
+    "Yukon"
+   ],
+   "roles": [
+    "manager"
+   ]
+  },
+  "mike-doublehead": {
+   "towns": [
+    "Stilwell",
+    "Pryor",
+    "Tahlequah"
+   ],
+   "roles": [
+    "utilities"
+   ]
+  },
+  "randall-ross": {
+   "towns": [
+    "Choctaw"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "bob-ponkilla": {
+   "towns": [
+    "Oklahoma City"
+   ],
+   "roles": [
+    "finance"
+   ]
+  },
+  "charles-smith": {
+   "towns": [
+    "Blackwell"
+   ],
+   "roles": [
+    "manager",
+    "statewide"
+   ]
+  },
+  "mary-sue-overbey": {
+   "towns": [
+    "Sand Springs"
+   ],
+   "roles": [
+    "finance"
+   ]
+  },
+  "dan-galloway": {
+   "towns": [
+    "Owasso",
+    "Clinton",
+    "Bethany",
+    "Stillwater",
+    "El Reno"
+   ],
+   "roles": [
+    "manager"
+   ]
+  },
+  "gary-pruett": {
+   "towns": [
+    "Pryor"
+   ],
+   "roles": [
+    "utilities"
+   ]
+  },
+  "jeff-shockley": {
+   "towns": [
+    "Poteau"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "michael-vanderburg": {
+   "towns": [
+    "Ponca City",
+    "Okmulgee",
+    "Morris",
+    "Broken Bow"
+   ],
+   "roles": [
+    "attorney"
+   ]
+  },
+  "pamela-polk": {
+   "towns": [
+    "Collinsville",
+    "Mangum"
+   ],
+   "roles": [
+    "manager",
+    "finance"
+   ]
+  },
+  "craig-stephenson": {
+   "towns": [
+    "Ponca City"
+   ],
+   "roles": [
+    "manager",
+    "utilities"
+   ]
+  },
+  "david-weatherford": {
+   "towns": [
+    "Coweta"
+   ],
+   "roles": [
+    "attorney"
+   ]
+  },
+  "george-fina": {
+   "towns": [
+    "Piedmont",
+    "Oklahoma City"
+   ],
+   "roles": [
+    "mayor",
+    "safety"
+   ]
+  },
+  "mary-rupp": {
+   "towns": [
+    "Stillwater",
+    "Perry"
+   ],
+   "roles": [
+    "manager",
+    "finance"
+   ]
+  },
+  "drake-rice": {
+   "towns": [],
+   "roles": [
+    "manager",
+    "utilities"
+   ]
+  },
+  "elaine-grace-carr": {
+   "towns": [
+    "West Siloam Springs"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "marilyn-kay-andrews": {
+   "towns": [
+    "Ponca City"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "michael-r-nunneley": {
+   "towns": [
+    "Granite",
+    "Mannford"
+   ],
+   "roles": [
+    "manager"
+   ]
+  },
+  "mick-cornett": {
+   "towns": [
+    "Oklahoma City"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "donald-alan-riffel": {
+   "towns": [
+    "Woodward",
+    "Anadarko"
+   ],
+   "roles": [
+    "manager",
+    "safety"
+   ]
+  },
+  "homer-lee-nicholson": {
+   "towns": [
+    "Ponca City"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "john-clair-ramey": {
+   "towns": [
+    "Tonkawa"
+   ],
+   "roles": [
+    "safety",
+    "finance",
+    "manager"
+   ]
+  },
+  "kevin-del-mccullough": {
+   "towns": [
+    "Earlsboro",
+    "Oklahoma City"
+   ],
+   "roles": [
+    "safety",
+    "statewide"
+   ]
+  },
+  "michael-anthony-crawford": {
+   "towns": [
+    "Edmond"
+   ],
+   "roles": [
+    "finance"
+   ]
+  },
+  "michael-duane-brown": {
+   "towns": [
+    "Weatherford"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "anthony-rivera-jr": {
+   "towns": [
+    "Okmulgee",
+    "Del City",
+    "Seminole",
+    "Ada",
+    "El Reno"
+   ],
+   "roles": [
+    "manager",
+    "finance"
+   ]
+  },
+  "gary-michael-burdge": {
+   "towns": [
+    "Sand Springs"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "victor-randolph-ewing": {
+   "towns": [
+    "Jenks"
+   ],
+   "roles": [
+    "manager"
+   ]
+  },
+  "anthony-m-francisco": {
+   "towns": [
+    "Norman"
+   ],
+   "roles": [
+    "finance"
+   ]
+  },
+  "cynthia-clover-shattuck": {
+   "towns": [
+    "Oklahoma City"
+   ],
+   "roles": [
+    "statewide",
+    "finance"
+   ]
+  },
+  "gerald-davis-wilkins": {
+   "towns": [
+    "Enid",
+    "Ardmore",
+    "Seminole"
+   ],
+   "roles": [
+    "manager"
+   ]
+  },
+  "jackie-shane-woolbright": {
+   "towns": [
+    "Jenks"
+   ],
+   "roles": [
+    "utilities",
+    "statewide"
+   ]
+  },
+  "robert-burns-johnston": {
+   "towns": [
+    "Clinton",
+    "Tonkawa",
+    "Frederick"
+   ],
+   "roles": [
+    "manager",
+    "utilities"
+   ]
+  },
+  "stephen-edward-reel": {
+   "towns": [
+    "The Village",
+    "Midwest City"
+   ],
+   "roles": [
+    "attorney",
+    "manager"
+   ]
+  },
+  "mary-ann-karns": {
+   "towns": [],
+   "roles": [
+    "attorney"
+   ]
+  },
+  "larry-hansen": {
+   "towns": [
+    "Stillwater"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "larry-shelton": {
+   "towns": [
+    "Guthrie",
+    "Chickasha"
+   ],
+   "roles": [
+    "manager"
+   ]
+  },
+  "gary-martin": {
+   "towns": [
+    "Ponca City"
+   ],
+   "roles": [
+    "manager",
+    "utilities"
+   ]
+  },
+  "james-hamill": {
+   "towns": [
+    "Oklahoma City"
+   ],
+   "roles": [
+    "attorney"
+   ]
+  },
+  "stanley-alexander": {
+   "towns": [
+    "The Village"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "wanda-jo-evaige": {
+   "towns": [
+    "Frederick"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "edward-smith": {
+   "towns": [
+    "Seminole",
+    "Oklahoma City"
+   ],
+   "roles": [
+    "safety"
+   ]
+  },
+  "joe-williams": {
+   "towns": [
+    "Bixby"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "thomas-talley": {
+   "towns": [
+    "Hobart"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "tommy-melton": {
+   "towns": [],
+   "roles": [
+    "finance"
+   ]
+  },
+  "carl-f-reherman": {
+   "towns": [
+    "Edmond",
+    "Chandler"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "james-couch": {
+   "towns": [
+    "Oklahoma City"
+   ],
+   "roles": [
+    "manager"
+   ]
+  },
+  "leroy-lage": {
+   "towns": [
+    "Watonga"
+   ],
+   "roles": [
+    "finance",
+    "utilities"
+   ]
+  },
+  "albert-veltema": {
+   "towns": [
+    "Walters"
+   ],
+   "roles": [
+    "manager",
+    "utilities"
+   ]
+  },
+  "charles-lamb": {
+   "towns": [
+    "Edmond"
+   ],
+   "roles": [
+    "mayor",
+    "utilities"
+   ]
+  },
+  "gene-brown-jr": {
+   "towns": [
+    "Duncan"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "glendene-goucher": {
+   "towns": [],
+   "roles": [
+    "finance"
+   ]
+  },
+  "bertha-ann-young": {
+   "towns": [
+    "Shawnee"
+   ],
+   "roles": [
+    "finance"
+   ]
+  },
+  "harold-pumford": {
+   "towns": [
+    "Guymon"
+   ],
+   "roles": [
+    "manager",
+    "statewide"
+   ]
+  },
+  "jessie-nelson": {
+   "towns": [
+    "Guymon"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "susan-savage": {
+   "towns": [
+    "Tulsa"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "donald-d-bown": {
+   "towns": [
+    "Oklahoma City"
+   ],
+   "roles": [
+    "manager"
+   ]
+  },
+  "george-f-wilkinson": {
+   "towns": [
+    "Weatherford"
+   ],
+   "roles": [
+    "manager",
+    "mayor"
+   ]
+  },
+  "robert-james-lafortune": {
+   "towns": [
+    "Tulsa"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "terry-h-powell": {
+   "towns": [
+    "Shawnee",
+    "Guymon"
+   ],
+   "roles": [
+    "manager"
+   ]
+  },
+  "ag-davenport": {
+   "towns": [
+    "Coalgate"
+   ],
+   "roles": [
+    "finance"
+   ]
+  },
+  "donald-c-rider": {
+   "towns": [],
+   "roles": [
+    "statewide"
+   ]
+  },
+  "jerry-johnston": {
+   "towns": [
+    "Braman"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "david-r-morgan-phd": {
+   "towns": [
+    "Norman"
+   ],
+   "roles": [
+    "statewide"
+   ]
+  },
+  "ernest-e-dirks": {
+   "towns": [
+    "Ardmore"
+   ],
+   "roles": [
+    "finance",
+    "statewide"
+   ]
+  },
+  "gary-marrs": {
+   "towns": [
+    "Oklahoma City"
+   ],
+   "roles": [
+    "safety"
+   ]
+  },
+  "james-c-reynolds": {
+   "towns": [
+    "Broken Arrow"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "lawrence-lee-gish": {
+   "towns": [
+    "Stillwater"
+   ],
+   "roles": [
+    "manager"
+   ]
+  },
+  "dr-charles-spencer": {
+   "towns": [
+    "Ada"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "leon-e-nelson": {
+   "towns": [
+    "Ponca City"
+   ],
+   "roles": [
+    "manager"
+   ]
+  },
+  "patience-sewell-latting": {
+   "towns": [
+    "Oklahoma City"
+   ],
+   "roles": [
+    "mayor"
+   ]
+  },
+  "robert-j-hicks": {
+   "towns": [
+    "Oklahoma City",
+    "El Reno",
+    "Chickasha"
+   ],
+   "roles": [
+    "safety"
+   ]
+  },
+  "william-a-moyer": {
+   "towns": [
+    "Bartlesville"
+   ],
+   "roles": [
+    "manager",
+    "statewide"
+   ]
+  },
+  "zach-d-taylor": {
+   "towns": [],
+   "roles": [
+    "statewide"
+   ]
+  }
+ }
+}

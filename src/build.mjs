@@ -5,6 +5,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { buildConcept } from "./concept.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
@@ -402,6 +403,7 @@ buildContentPage("nominate", "content/nominate.html", "Nominate someone", "How t
 buildNews();
 buildPhotos();
 buildContact();
+buildConcept({ ROOT, site, inductees, years, u, esc, stripTags, write, role });
 build404();
 if (!PREVIEW) {
   buildRedirects();
