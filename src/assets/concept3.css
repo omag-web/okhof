@@ -51,11 +51,6 @@ p { margin: 0 0 1em; }
 
 /* ---------- header ---------- */
 .hdr { background: var(--charcoal); position: sticky; top: 0; z-index: 40; }
-.util { background: #1a1a1a; color: #bcb7ab; font-size: .85rem; }
-.util-inner { display: flex; justify-content: space-between; gap: 1rem; padding-block: .4rem; }
-.util-links { display: flex; gap: 1.25rem; }
-.util a { color: #e9e6df; text-decoration: none; }
-.util a:hover { color: var(--taupe-light); }
 .hdr-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; min-height: 5rem; }
 .hdr-brand { display: flex; align-items: center; gap: .9rem; }
 .hdr-seal { width: 3.1rem; height: auto; }
@@ -72,23 +67,22 @@ p { margin: 0 0 1em; }
   .hdr-nav a:not(.btn) { padding: .85rem 0; border-bottom: 1px solid var(--charcoal-2); }
   .hdr-cta { margin-top: 1rem; }
   .hdr-word { display: none; }
-  .util-links a:first-child { display: none; }
 }
 
 /* ---------- hero ---------- */
-.hero { position: relative; overflow: hidden; isolation: isolate; color: #fff; min-height: clamp(32rem, 76vh, 48rem); display: flex; align-items: center; }
+.hero { position: relative; overflow: hidden; isolation: isolate; color: #fff; min-height: clamp(24rem, 58vh, 36rem); display: flex; align-items: center; }
 .hero-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; max-width: none; z-index: -2; }
 .hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(34, 34, 34, .9) 0%, rgba(34, 34, 34, .62) 50%, rgba(34, 34, 34, .3) 100%), linear-gradient(0deg, rgba(34, 34, 34, .55), transparent 40%); }
 @media (prefers-reduced-motion: no-preference) {
   .hero-bg { animation: slowzoom 24s ease-in-out infinite alternate; }
 }
 @keyframes slowzoom { from { transform: scale(1); } to { transform: scale(1.12) translateY(-1.5%); } }
-.hero-inner { width: 100%; padding-block: clamp(4rem, 9vw, 6rem) clamp(9rem, 15vw, 11rem); }
-.hero h1 { color: #fff; font-size: clamp(3rem, 7.4vw, 6.4rem); max-width: 13ch; margin-bottom: 2.25rem; }
+.hero-inner { width: 100%; padding-block: clamp(2.75rem, 5vw, 4rem) clamp(6.5rem, 9vw, 7.5rem); }
+.hero h1 { color: #fff; font-size: clamp(2.5rem, 5vw, 4.6rem); max-width: 22ch; margin-bottom: 1.75rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .85rem; }
 
 /* ---------- feature cards overlapping the hero ---------- */
-.features { position: relative; z-index: 2; margin-top: clamp(-7.5rem, -10vw, -5rem); padding-bottom: clamp(3.5rem, 7vw, 5.5rem); }
+.features { position: relative; z-index: 2; margin-top: clamp(-5.5rem, -7vw, -3.5rem); padding-bottom: clamp(3.5rem, 7vw, 5.5rem); }
 .fcards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 1.75rem); }
 .fcard { background: var(--paper); box-shadow: 0 24px 50px -18px rgba(34, 34, 34, .35); display: flex; flex-direction: column; }
 .fcard img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }

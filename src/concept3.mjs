@@ -47,7 +47,6 @@ export function buildConcept3({ ROOT, site, inductees, years, byYear, u, esc, wr
 <div class="note">Design concept 3 for review. Not linked from the live site. <a href="${u("/concept/")}">Concept 1</a> <a href="${u("/")}">Current site</a></div>
 
 <header class="hdr">
-  <div class="util"><div class="frame util-inner"><span id="season-util"></span><span class="util-links"><a href="tel:${site.contact.phoneHref}">${esc(site.contact.phone)}</a><a href="${u("/contact/")}">Contact</a></span></div></div>
   <div class="frame hdr-inner">
     <a class="hdr-brand" href="#top"><img class="hdr-seal" src="${u("/media/brand/seal.png")}" width="168" height="168" alt=""><img class="hdr-word" src="${u("/media/brand/wordmark.webp")}" width="1500" height="224" alt="${esc(site.name)}"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="hdr-nav">Menu</button>

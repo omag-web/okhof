@@ -65,6 +65,5 @@
   } else {
     text = "Nominations open January 1, " + (now > closes ? yr + 1 : yr);
   }
-  document.getElementById("season-util").textContent = text;
-  document.getElementById("season-cta").textContent = text;
+    document.getElementById("season-cta").textContent = text;
 })();
