@@ -75,9 +75,7 @@
 
       letterButtons.forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.letter === letter)); });
       var filtered = terms.length || y || letter;
-      count.textContent = filtered
-        ? "Showing " + shown + " of " + cards.length + " inductees"
-        : "Showing all " + cards.length + " inductees";
+      count.textContent = filtered ? (shown === 1 ? "1 match" : shown + " matches") : "";
       empty.hidden = shown !== 0;
 
       var p = new URLSearchParams();

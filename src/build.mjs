@@ -224,12 +224,12 @@ function buildHome() {
   <img class="hero-bg" src="${u("/media/brand/hero-dome.webp")}" alt="" fetchpriority="high" decoding="async">
   <div class="wrap hero-inner">
     <h1>Honoring the people who built Oklahoma's cities and towns.</h1>
-    <p class="hero-lede">Since ${site.firstClass}, the Hall of Fame has inducted ${inductees.length} mayors, managers, clerks, council members and public servants whose work strengthened municipal government across the state.</p>
+    <p class="hero-lede">Since ${site.firstClass}, the Hall of Fame has honored the mayors, managers, clerks, council members and public servants whose work strengthened municipal government across the state.</p>
     <form class="hero-search" action="${u("/inductees/")}" role="search">
       <label for="hero-q">Find an inductee</label>
       <div class="search-row"><input id="hero-q" name="q" type="search" placeholder="Name or town" autocomplete="off"><button type="submit">Search</button></div>
     </form>
-    <p class="hero-browse"><a href="${u("/inductees/")}">Browse all ${inductees.length} inductees</a></p>
+    <p class="hero-browse"><a href="${u("/inductees/")}">Browse all inductees</a></p>
   </div>
 </section>
 
@@ -252,7 +252,7 @@ function buildHome() {
 
 function buildLibrary() {
   const letters = [...new Set(inductees.map((i) => i.sortName[0].toUpperCase()))].sort();
-  const body = `${pageHead("Inductees", `${inductees.length} officials honored across ${years.length} classes since ${site.firstClass}.`)}
+  const body = `${pageHead("Inductees", `Every official honored since ${site.firstClass}. Search by name, town or title, or browse by class.`)}
 <section class="section library"><div class="wrap">
   <form class="filters" role="search" aria-controls="results" onsubmit="return false">
     <div class="field field-q"><label for="q">Search</label><input id="q" name="q" type="search" placeholder="Name, city or title" autocomplete="off"></div>
@@ -260,11 +260,11 @@ function buildLibrary() {
     <div class="field"><label for="sort">Sort</label><select id="sort" name="sort"><option value="class">Newest class first</option><option value="name">Last name, A–Z</option></select></div>
   </form>
   <nav class="letters" aria-label="Filter by last name"><button type="button" data-letter="" aria-pressed="true">All</button>${letters.map((l) => `<button type="button" data-letter="${l}" aria-pressed="false">${l}</button>`).join("")}</nav>
-  <p class="result-count" id="count" aria-live="polite">Showing all ${inductees.length} inductees</p>
+  <p class="result-count" id="count" aria-live="polite"></p>
   <ul class="cards" id="results">${inductees.map((i) => card(i)).join("")}</ul>
   <p class="empty" id="empty" hidden>No inductees match that search. Try a last name or a city, or <button type="button" class="linklike" id="reset">clear the filters</button>.</p>
 </div></section>`;
-  write("inductees/index.html", layout({ title: "Inductees", description: `Browse all ${inductees.length} inductees of the ${site.name}, ${site.firstClass}–${latestYear}.`, path: "/inductees/", body, active: "/inductees/", bodyClass: "page-library" }));
+  write("inductees/index.html", layout({ title: "Inductees", description: `Browse every inductee of the ${site.name} since ${site.firstClass}.`, path: "/inductees/", body, active: "/inductees/", bodyClass: "page-library" }));
 }
 
 function buildClasses() {

@@ -51,8 +51,7 @@ export function buildConcept({ ROOT, site, inductees, years, u, esc, stripTags, 
 
   // ---- Nomination season: open January 1 through June 1 ----
   const roleChips = concept.roles.map(([k, label]) => {
-    const n = people.filter((p) => p.roles.includes(k)).length;
-    return `<button type="button" class="chip" data-role="${k}" aria-pressed="false">${esc(label)} <span>${n}</span></button>`;
+    return `<button type="button" class="chip" data-role="${k}" aria-pressed="false">${esc(label)}</button>`;
   }).join("");
 
   const tiles = people.map((p) => `<li><button type="button" class="tile" data-slug="${p.s}" aria-label="${esc(p.n)}, ${esc(p.r)}, class of ${p.y}"><img src="${esc(p.t)}" alt="" loading="lazy" decoding="async" width="160" height="200"><span class="tile-label"><span class="tile-name">${esc(p.n)}</span><span class="tile-year">${p.y}</span></span></button></li>`).join("");
@@ -90,7 +89,7 @@ export function buildConcept({ ROOT, site, inductees, years, u, esc, stripTags, 
 <section class="c-hero" id="top">
   <img class="c-hero-bg" src="${u("/media/brand/hero-dome.webp")}" alt="" fetchpriority="high">
   <div class="wrap c-hero-inner">
-    <h1>${inductees.length} public servants who built Oklahoma's cities and towns.</h1>
+    <h1>The public servants who built Oklahoma's cities and towns.</h1>
     <p>Mayors, managers, clerks, attorneys, chiefs and council members honored by the Oklahoma Hall of Fame for City and Town Officials since ${site.firstClass}.</p>
     <label class="c-search" for="wall-q">
       <span class="visually-hidden">Search inductees</span>
@@ -104,7 +103,7 @@ export function buildConcept({ ROOT, site, inductees, years, u, esc, stripTags, 
   <div class="wrap-wide">
     <div class="hall-head">
       <h2 id="hall-title">The Hall</h2>
-      <p class="hall-count" id="hall-count" aria-live="polite">All ${inductees.length} inductees, ${site.firstClass}–${years[0]}</p>
+      <p class="hall-count" id="hall-count" aria-live="polite">Every class since ${site.firstClass}</p>
     </div>
     <div class="hall-filters">
       <div class="chips" role="group" aria-label="Filter by role">${roleChips}</div>
@@ -121,7 +120,7 @@ export function buildConcept({ ROOT, site, inductees, years, u, esc, stripTags, 
   <div class="wrap explore-grid">
     <div class="map-col">
       <h2 id="explore-title">Find inductees by town</h2>
-      <p class="explore-lede">${Object.keys(townCounts).length} Oklahoma communities have an inductee. Choose a town on the map.</p>
+      <p class="explore-lede">Inductees have served communities in every corner of the state. Choose a town on the map.</p>
       <svg class="ok-map" viewBox="0 0 ${W} ${H}" role="group" aria-label="Map of Oklahoma towns with inductees">
         <path class="ok-shape" d="${outlinePath}"></path>
         ${dots}

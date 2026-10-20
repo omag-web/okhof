@@ -39,7 +39,7 @@
       if (ok) shown++;
     });
     var filtered = terms.length || y || activeRole || activeTown;
-    count.textContent = filtered ? shown + " of " + total + " inductees" : "All " + total + " inductees, 2001–" + people[0].y;
+    count.textContent = filtered ? (shown === 1 ? "1 match" : shown + " matches") : "Every class since 2001";
     empty.hidden = shown !== 0;
   }
 
