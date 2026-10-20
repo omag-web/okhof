@@ -60,8 +60,7 @@ export function buildConcept3({ ROOT, site, inductees, years, u, esc, write, rol
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="hdr-nav">Menu</button>
     <nav class="hdr-nav" id="hdr-nav" aria-label="Main">
       <a href="${u("/inductees/")}">Inductees</a>
-      <a href="${u("/inductees/")}">Classes</a>
-      <a href="${u("/history/")}">About</a>
+      <a href="${u("/history/")}">History</a>
       <a href="${u("/photos/")}">Photos</a>
       <a class="btn btn-solid hdr-cta" href="${u("/nominate/")}">Nominate</a>
     </nav>
