@@ -1,4 +1,4 @@
-// Design concept 3 interactions: mobile menu, random inductee cards, nomination season.
+// Design concept 3 interactions: mobile menu, random inductee cards, town map, nomination season.
 (function () {
   "use strict";
   var people = JSON.parse(document.getElementById("people").textContent);
@@ -23,6 +23,42 @@
       '<span class="pcard-body"><span class="pcard-year">Class of ' + p.y + '</span><span class="pcard-name">' + esc(p.n) + '</span>' +
       '<span class="pcard-role">' + esc(p.r) + '</span><span class="pcard-more">View profile</span></span></a></li>';
   }).join("");
+
+  /* Map of towns */
+  var townTitle = document.getElementById("town-title");
+  var townTop = document.getElementById("town-top");
+  var townPeople = document.getElementById("town-people");
+  var townDots = Array.prototype.slice.call(document.querySelectorAll(".town"));
+  function showTown(town) {
+    var list = people.filter(function (p) { return p.towns.indexOf(town) !== -1; });
+    townTitle.textContent = town;
+    townTop.hidden = true;
+    townPeople.hidden = false;
+    townPeople.innerHTML = list.map(function (p) {
+      return '<li><a class="town-person" href="' + esc(p.u) + '"><img src="' + esc(p.t) + '" alt="" loading="lazy">' +
+        "<span><strong>" + esc(p.n) + "</strong><span>" + esc(p.r) + ", class of " + p.y + "</span></span></a></li>";
+    }).join("") + '<li class="town-back"><button type="button" class="linklike" data-back>All towns</button></li>';
+    townDots.forEach(function (d) { d.classList.toggle("is-active", d.dataset.town === town); });
+  }
+  function resetTown() {
+    townTitle.textContent = "Most represented";
+    townTop.hidden = false;
+    townPeople.hidden = true;
+    townDots.forEach(function (d) { d.classList.remove("is-active"); });
+  }
+  townDots.forEach(function (d) {
+    d.addEventListener("click", function () { showTown(d.dataset.town); });
+    d.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); showTown(d.dataset.town); }
+    });
+  });
+  townTop.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-town]");
+    if (b) showTown(b.dataset.town);
+  });
+  townPeople.addEventListener("click", function (e) {
+    if (e.target.closest("[data-back]")) resetTown();
+  });
 
   /* Nomination season: open January 1 through June 1 */
   var now = new Date(), yr = now.getFullYear();

@@ -79,18 +79,32 @@ p { margin: 0 0 1em; }
 .hero h1 { color: #fff; font-size: clamp(2.5rem, 5vw, 4.6rem); max-width: 22ch; margin-bottom: 1.75rem; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: .85rem; }
 
-/* ---------- feature cards overlapping the hero ---------- */
-.features { padding-block: clamp(3rem, 6vw, 5rem); }
-.fcards { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 1.75rem); }
-.fcard { background: var(--stone); display: flex; flex-direction: column; }
-.fcard img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
-.fcard-body { padding: 1.6rem 1.6rem 1.8rem; display: flex; flex-direction: column; flex: 1; border-top: 4px solid var(--taupe); }
-.tag { font: 600 .85rem var(--head); text-transform: uppercase; letter-spacing: .14em; color: var(--taupe-deep); margin-bottom: .6rem; }
-.fcard h2 { font-size: clamp(1.7rem, 2.4vw, 2.1rem); margin-bottom: .55rem; }
-.fcard p { color: var(--ink-soft); }
-.more { margin-top: auto; font: 600 1rem var(--head); text-transform: uppercase; letter-spacing: .08em; color: var(--charcoal); text-decoration: none; border-bottom: 2px solid var(--taupe); align-self: flex-start; padding-bottom: .15rem; }
-.more:hover { color: var(--taupe-deep); }
-@media (max-width: 56rem) { .fcards { grid-template-columns: 1fr; } }
+/* ---------- find inductees by town ---------- */
+.townmap { padding-block: clamp(3.5rem, 7vw, 6rem); }
+.townmap-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: start; }
+.townmap-map h2 { font-size: clamp(2.4rem, 4.6vw, 3.9rem); }
+.townmap-lede { color: var(--ink-soft); font-size: 1.15rem; max-width: 40rem; }
+.ok-map { width: 100%; height: auto; margin-top: 1rem; overflow: visible; }
+.ok-shape { fill: var(--stone); stroke: var(--taupe); stroke-width: 1.5; stroke-linejoin: round; }
+.town circle { fill: var(--taupe); fill-opacity: .8; stroke: var(--paper); stroke-width: 1.5; cursor: pointer; transition: fill .2s ease; }
+.town:hover circle, .town:focus-visible circle { fill: var(--charcoal); fill-opacity: 1; }
+.town:focus-visible { outline: none; }
+.town.is-active circle { fill: var(--charcoal); fill-opacity: 1; stroke: var(--taupe-light); stroke-width: 3; }
+.town-panel { background: var(--stone); border-top: 4px solid var(--taupe); padding: 1.5rem 1.6rem 1.75rem; min-height: 22rem; }
+.town-title { font-size: 1.9rem; margin-bottom: .75rem; }
+.town-top, .town-people { list-style: none; margin: 0; padding: 0; }
+.town-link { display: flex; justify-content: space-between; width: 100%; background: none; border: 0; border-bottom: 1px solid var(--rule); padding: .75rem 0; font: 600 1.15rem var(--head); text-transform: uppercase; letter-spacing: .04em; color: var(--charcoal); cursor: pointer; text-align: left; }
+.town-link span:last-child { color: var(--taupe-deep); font-variant-numeric: tabular-nums; }
+.town-link:hover span:first-child { color: var(--taupe-deep); }
+.town-people li + li { border-top: 1px solid var(--rule); }
+.town-person { display: flex; align-items: center; gap: .9rem; padding: .7rem 0; text-decoration: none; color: inherit; }
+.town-person img { width: 3.2rem; aspect-ratio: 4 / 5; object-fit: cover; flex: none; }
+.town-person strong { display: block; font: 700 1.25rem/1.05 var(--head); text-transform: uppercase; color: var(--charcoal); }
+.town-person span span { display: block; font-size: .88rem; color: var(--ink-soft); margin-top: .15rem; }
+.town-person:hover strong { color: var(--taupe-deep); }
+.town-back { padding-top: 1rem; }
+.linklike { background: none; border: 0; padding: 0; font: 600 .95rem var(--head); text-transform: uppercase; letter-spacing: .08em; color: var(--charcoal); border-bottom: 2px solid var(--taupe); cursor: pointer; }
+@media (max-width: 56rem) { .townmap-grid { grid-template-columns: 1fr; } .town-panel { min-height: 0; } }
 
 /* ---------- legends ---------- */
 .legends { background: var(--stone); padding-block: clamp(3.5rem, 7vw, 6rem); }

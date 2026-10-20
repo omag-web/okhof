@@ -9,7 +9,30 @@ import path from "node:path";
 export function buildConcept3({ ROOT, site, inductees, years, u, esc, write, role }) {
   const thumbFor = (i) => (fs.existsSync(path.join(ROOT, "media/thumbs", `${i.slug}.webp`)) ? u(`/media/thumbs/${i.slug}.webp`) : i.photoSrc);
   const arch = (name) => u(`/media/archive/${name}`);
-  const people = inductees.map((i) => ({ n: i.name, u: i.url, t: thumbFor(i), r: role(i), y: i.year }));
+  const concept = JSON.parse(fs.readFileSync(path.join(ROOT, "data/concept.json"), "utf8"));
+  const townsOf = (i) => concept.inductees[i.slug]?.towns || [];
+  const people = inductees.map((i) => ({ n: i.name, u: i.url, t: thumbFor(i), r: role(i), y: i.year, towns: townsOf(i) }));
+
+  // ---- Map of towns: equirectangular projection corrected for Oklahoma's latitude ----
+  const LON0 = -103.15, LAT0 = 37.12, KX = 81.5, KY = 100;
+  const px = (lon) => +((lon - LON0) * KX).toFixed(1);
+  const py = (lat) => +((LAT0 - lat) * KY).toFixed(1);
+  const outline = [
+    [-103.002, 37.0], [-94.618, 37.0], [-94.618, 36.5], [-94.55, 35.9], [-94.43, 35.39], [-94.46, 34.5], [-94.485, 33.64],
+    [-94.9, 33.82], [-95.3, 33.87], [-95.8, 33.86], [-96.15, 33.82], [-96.6, 33.85], [-96.95, 33.75], [-97.15, 33.72],
+    [-97.6, 33.92], [-98.05, 34.12], [-98.5, 34.14], [-98.95, 34.21], [-99.25, 34.37], [-99.6, 34.38], [-100.0, 34.56],
+    [-100.0, 36.5], [-103.002, 36.5],
+  ];
+  const outlinePath = "M" + outline.map(([lon, lat]) => `${px(lon)},${py(lat)}`).join("L") + "Z";
+  const townCounts = {};
+  for (const p of people) for (const t of p.towns) townCounts[t] = (townCounts[t] || 0) + 1;
+  const dots = Object.entries(townCounts).sort((a, b) => a[1] - b[1]).map(([t, n]) => {
+    const [lat, lon] = concept.towns[t];
+    const r = (3.4 + Math.sqrt(n) * 2.7).toFixed(1);
+    return `<g class="town" tabindex="0" role="button" data-town="${esc(t)}" aria-label="${esc(t)}: ${n} inductee${n === 1 ? "" : "s"}"><circle cx="${px(lon)}" cy="${py(lat)}" r="${r}"></circle></g>`;
+  }).join("");
+  const MW = px(-94.3), MH = py(33.5);
+  const topTowns = Object.entries(townCounts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).slice(0, 8);
 
   const card = (p) => `<li class="pcard"><a href="${p.u}"><span class="pcard-img"><img src="${esc(p.t)}" alt="" loading="lazy" decoding="async"></span><span class="pcard-body"><span class="pcard-year">Class of ${p.y}</span><span class="pcard-name">${esc(p.n)}</span><span class="pcard-role">${esc(p.r)}</span><span class="pcard-more">View profile</span></span></a></li>`;
 
@@ -58,22 +81,22 @@ export function buildConcept3({ ROOT, site, inductees, years, u, esc, write, rol
   </div>
 </section>
 
-<section class="features" aria-label="Featured">
-  <div class="frame">
-    <ul class="fcards">
-      <li class="fcard">
-        <img src="${arch("104-dsc_0116.jpg")}" alt="Inductees wearing their Hall of Fame medals" loading="lazy">
-        <div class="fcard-body"><span class="tag">Inductees</span><h2>Meet the Hall of Fame</h2><p>Mayors, managers, clerks, attorneys and chiefs honored since ${site.firstClass} for service that reached beyond their own communities.</p><a class="more" href="${u("/inductees/")}">Browse the inductees</a></div>
-      </li>
-      <li class="fcard">
-        <img src="${arch("099-dsc_0395.jpg")}" alt="An inductee receives the Hall of Fame medal" loading="lazy">
-        <div class="fcard-body"><span class="tag">Nominations</span><h2>Nominate an official</h2><p>Nominations are accepted until ${esc(site.nomination.deadline)} each year. Up to ${site.nomination.maxPerYear} officials are inducted annually.</p><a class="more" href="${u("/nominate/")}">How to nominate</a></div>
-      </li>
-      <li class="fcard">
-        <img src="${arch("094-dsc_0386.jpg")}" alt="An inductee gives an acceptance speech at the podium" loading="lazy">
-        <div class="fcard-body"><span class="tag">Ceremony</span><h2>Watch the speeches</h2><p>Hear inductees accept the honor at the ${esc(site.nomination.ceremony)}, in their own words.</p><a class="more" href="${u("/inductees/")}">Find a speech</a></div>
-      </li>
-    </ul>
+<section class="townmap" id="towns" aria-labelledby="towns-title">
+  <div class="frame townmap-grid">
+    <div class="townmap-map">
+      <p class="kicker kicker-dark">Across the state</p>
+      <h2 id="towns-title">Find inductees by town</h2>
+      <p class="townmap-lede">Inductees have served communities in every corner of Oklahoma. Choose a town on the map.</p>
+      <svg class="ok-map" viewBox="0 0 ${MW} ${MH}" role="group" aria-label="Map of Oklahoma towns with inductees">
+        <path class="ok-shape" d="${outlinePath}"></path>
+        ${dots}
+      </svg>
+    </div>
+    <div class="town-panel" aria-live="polite">
+      <h3 class="town-title" id="town-title">Most represented</h3>
+      <ul class="town-top" id="town-top">${topTowns.map(([t, n]) => `<li><button type="button" class="town-link" data-town="${esc(t)}"><span>${esc(t)}</span><span>${n}</span></button></li>`).join("")}</ul>
+      <ul class="town-people" id="town-people" hidden></ul>
+    </div>
   </div>
 </section>
 
