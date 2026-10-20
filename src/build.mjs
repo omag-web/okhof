@@ -405,7 +405,7 @@ buildNews();
 buildPhotos();
 buildContact();
 buildConcept({ ROOT, site, inductees, years, u, esc, stripTags, write, role });
-buildConcept3({ ROOT, site, inductees, years, byYear, u, esc, write, role });
+buildConcept3({ ROOT, site, inductees, years, u, esc, write, role });
 build404();
 if (!PREVIEW) {
   buildRedirects();

@@ -1,32 +1,17 @@
 // Design concept 3: /concept-3/
 // Modeled on the structure of nationalsoccerhof.com: full-bleed hero with a bold stacked headline,
-// feature cards overlapping the hero, a legends split, profile cards, a class timeline slider,
+// feature cards, a legends split, profile cards,
 // a full-width photo call to action, supporters and a large footer. Not linked; noindex.
 
 import fs from "node:fs";
 import path from "node:path";
 
-export function buildConcept3({ ROOT, site, inductees, years, byYear, u, esc, write, role }) {
+export function buildConcept3({ ROOT, site, inductees, years, u, esc, write, role }) {
   const thumbFor = (i) => (fs.existsSync(path.join(ROOT, "media/thumbs", `${i.slug}.webp`)) ? u(`/media/thumbs/${i.slug}.webp`) : i.photoSrc);
   const arch = (name) => u(`/media/archive/${name}`);
   const people = inductees.map((i) => ({ n: i.name, u: i.url, t: thumbFor(i), r: role(i), y: i.year }));
 
   const card = (p) => `<li class="pcard"><a href="${p.u}"><span class="pcard-img"><img src="${esc(p.t)}" alt="" loading="lazy" decoding="async"></span><span class="pcard-body"><span class="pcard-year">Class of ${p.y}</span><span class="pcard-name">${esc(p.n)}</span><span class="pcard-role">${esc(p.r)}</span><span class="pcard-more">View profile</span></span></a></li>`;
-
-  // Timeline: two founding milestones, then every class, oldest first
-  const milestones = [
-    { y: "2000", title: "The foundation is created", text: "On January 19, three Oklahoma Municipal Assurance Group employees incorporate the foundation, following a proposal by Chickasha City Manager Larry Shelton." },
-  ];
-  const slides = [
-    ...milestones.map((m) => `<li class="slide slide-milestone"><span class="slide-year">${m.y}</span><h3>${esc(m.title)}</h3><p>${esc(m.text)}</p></li>`),
-    ...[...years].reverse().map((y) => {
-      const cls = byYear[y];
-      return `<li class="slide"><span class="slide-year">${y}</span><h3>The class of ${y}</h3>
-        <ul class="slide-faces">${cls.map((i) => `<li><img src="${esc(thumbFor(i))}" alt="" loading="lazy" decoding="async"></li>`).join("")}</ul>
-        <p class="slide-names">${cls.map((i) => esc(i.name)).join(", ")}</p>
-        <a class="slide-link" href="${u(`/class/${y}/`)}">View the class</a></li>`;
-    }),
-  ].join("");
 
   const html = `<!doctype html>
 <html lang="en">
@@ -48,11 +33,11 @@ export function buildConcept3({ ROOT, site, inductees, years, byYear, u, esc, wr
 
 <header class="hdr">
   <div class="frame hdr-inner">
-    <a class="hdr-brand" href="#top"><img class="hdr-seal" src="${u("/media/brand/seal.png")}" width="168" height="168" alt=""><img class="hdr-word" src="${u("/media/brand/wordmark.webp")}" width="1500" height="224" alt="${esc(site.name)}"></a>
+    <a class="hdr-brand" href="#top"><img class="hdr-word" src="${u("/media/brand/wordmark.webp")}" width="1500" height="224" alt="${esc(site.name)}"></a>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="hdr-nav">Menu</button>
     <nav class="hdr-nav" id="hdr-nav" aria-label="Main">
       <a href="${u("/inductees/")}">Inductees</a>
-      <a href="#timeline">Classes</a>
+      <a href="${u("/inductees/")}">Classes</a>
       <a href="${u("/history/")}">About</a>
       <a href="${u("/photos/")}">Photos</a>
       <a class="btn btn-solid hdr-cta" href="${u("/nominate/")}">Nominate</a>
@@ -112,22 +97,6 @@ export function buildConcept3({ ROOT, site, inductees, years, byYear, u, esc, wr
     </div>
     <ul class="pcards" id="pcards">${people.slice(0, 4).map(card).join("")}</ul>
   </div>
-</section>
-
-<section class="timeline" id="timeline" aria-labelledby="timeline-title">
-  <div class="frame">
-    <div class="sec-head sec-head-light">
-      <h2 id="timeline-title">Through the years</h2>
-      <div class="tl-controls">
-        <button type="button" class="tl-btn" data-dir="-1" aria-label="Earlier"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button>
-        <button type="button" class="tl-btn" data-dir="1" aria-label="Later"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
-      </div>
-    </div>
-  </div>
-  <div class="tl-track-wrap">
-    <ol class="tl-track" id="tl-track" tabindex="0" aria-label="Classes from 2000 to ${years[0]}">${slides}</ol>
-  </div>
-  <div class="frame"><div class="tl-progress"><span id="tl-bar"></span></div></div>
 </section>
 
 <section class="cta">

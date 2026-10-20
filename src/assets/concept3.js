@@ -1,4 +1,4 @@
-// Design concept 3 interactions: mobile menu, random inductee cards, timeline slider, nomination season.
+// Design concept 3 interactions: mobile menu, random inductee cards, nomination season.
 (function () {
   "use strict";
   var people = JSON.parse(document.getElementById("people").textContent);
@@ -23,37 +23,6 @@
       '<span class="pcard-body"><span class="pcard-year">Class of ' + p.y + '</span><span class="pcard-name">' + esc(p.n) + '</span>' +
       '<span class="pcard-role">' + esc(p.r) + '</span><span class="pcard-more">View profile</span></span></a></li>';
   }).join("");
-
-  /* Timeline slider: arrows move one slide; progress bar follows the scroll; starts at the newest class */
-  var track = document.getElementById("tl-track");
-  var bar = document.getElementById("tl-bar");
-  var step = function () {
-    var s = track.querySelector(".slide");
-    return s ? s.getBoundingClientRect().width + parseFloat(getComputedStyle(track).columnGap || 16) : 300;
-  };
-  document.querySelectorAll(".tl-btn").forEach(function (b) {
-    b.addEventListener("click", function () { track.scrollBy({ left: Number(b.dataset.dir) * step(), behavior: "smooth" }); });
-  });
-  track.addEventListener("keydown", function (e) {
-    if (e.key === "ArrowRight") { e.preventDefault(); track.scrollBy({ left: step() }); }
-    if (e.key === "ArrowLeft") { e.preventDefault(); track.scrollBy({ left: -step() }); }
-  });
-  var update = function () {
-    var max = track.scrollWidth - track.clientWidth;
-    var view = track.clientWidth / track.scrollWidth;
-    bar.style.width = Math.max(view * 100, 6) + "%";
-    bar.style.marginLeft = (max > 0 ? (track.scrollLeft / max) * (100 - Math.max(view * 100, 6)) : 0) + "%";
-  };
-  track.addEventListener("scroll", update, { passive: true });
-  window.addEventListener("resize", update);
-  // Open on the most recent classes
-  requestAnimationFrame(function () {
-    var prev = track.style.scrollBehavior;
-    track.style.scrollBehavior = "auto";
-    track.scrollLeft = track.scrollWidth;
-    track.style.scrollBehavior = prev;
-    update();
-  });
 
   /* Nomination season: open January 1 through June 1 */
   var now = new Date(), yr = now.getFullYear();
