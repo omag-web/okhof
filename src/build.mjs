@@ -90,8 +90,6 @@ const NAV = [
 ];
 
 const sealImg = (cls, alt = "") => `<img class="${cls}" src="${u("/media/brand/seal.png")}" width="168" height="168" alt="${esc(alt)}">`;
-// The seal set between sections, as on the original site.
-const sealDivider = `<div class="seal-divider" aria-hidden="true"><span></span>${sealImg("seal-divider-img")}<span></span></div>`;
 
 function layout({ title, description, path: p, body, active = "", jsonld = null, ogImage = "", bodyClass = "" }) {
   const fullTitle = title ? `${title} · ${site.shortName}` : site.name;
@@ -213,8 +211,13 @@ function fill(tpl) {
 }
 
 /* ---------- pages ---------- */
+function pickRandom(list, n) {
+  const a = list.slice();
+  for (let k = a.length - 1; k > 0; k--) { const j = Math.floor(Math.random() * (k + 1)); [a[k], a[j]] = [a[j], a[k]]; }
+  return a.slice(0, n);
+}
+
 function buildHome() {
-  const latest = byYear[latestYear];
   const body = `
 <section class="hero">
   <img class="hero-bg" src="${u("/media/brand/hero-dome.webp")}" alt="" fetchpriority="high" decoding="async">
@@ -229,22 +232,16 @@ function buildHome() {
   </div>
 </section>
 
-<section class="section latest"><div class="wrap">
-  <div class="section-head">
-    <h2>The class of ${latestYear}</h2>
-    <a class="more" href="${u(`/class/${latestYear}/`)}">Meet the class</a>
-  </div>
-  <ul class="cards cards-feature">${latest.map((i) => card(i, { showYear: false })).join("")}</ul>
-</div></section>
-
-${sealDivider}
-
-<section class="section band"><div class="wrap band-grid">
-  <div>
+<section class="section intro-split"><div class="wrap split-grid">
+  <div class="split-copy">
     <h2>Know someone who belongs here?</h2>
-    <p>Nominations are open to anyone who has served an Oklahoma city, town, public trust or municipal organization with distinction and unquestioned ethics. Nominations close ${esc(site.nomination.deadline)} each year.</p>
+    <p>Nominations are open to anyone who has served an Oklahoma city, town, public trust or municipal organization with distinction and unquestioned ethics. Up to ${site.nomination.maxPerYear} officials are inducted each year, and nominations close ${esc(site.nomination.deadline)}.</p>
+    <a class="button" href="${u("/nominate/")}">How to nominate</a>
   </div>
-  <div class="band-action"><a class="button" href="${u("/nominate/")}">How to nominate</a></div>
+  <div class="split-featured">
+    <ul class="cards cards-trio" id="featured">${pickRandom(inductees.filter((i) => i.photoSrc), 3).map((i) => card(i)).join("")}</ul>
+    <script type="application/json" id="featured-pool">${JSON.stringify(inductees.filter((i) => i.photoSrc).map((i) => ({ n: i.name, u: i.url, p: i.photoSrc, r: role(i), y: i.year }))).replace(/</g, "\\u003c")}</script>
+  </div>
 </div></section>`;
   write("index.html", layout({
     title: "", path: "/", body, bodyClass: "home",

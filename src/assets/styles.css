@@ -109,10 +109,19 @@ input[type="search"]:focus, select:focus { outline: var(--focus); outline-offset
 .more { font-weight: 600; }
 .latest { background: var(--paper); }
 
-/* The seal between sections, carried over from the original site */
-.seal-divider { display: flex; align-items: center; gap: clamp(1rem, 3vw, 2rem); max-width: var(--wrap); margin: 0 auto; padding: clamp(1.75rem, 4vw, 2.75rem) var(--gutter); }
-.seal-divider span { flex: 1; height: 1px; background: var(--taupe); opacity: .55; }
-.seal-divider-img { width: clamp(4.5rem, 9vw, 6rem); height: auto; flex: none; }
+/* Home: nomination pitch beside three random inductees */
+.intro-split { background: var(--paper); }
+.split-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.75fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.split-copy { border-top: 3px solid var(--taupe); padding-top: 1.5rem; }
+.split-copy h2 { font-size: var(--step-3); }
+.split-copy p { color: var(--ink-soft); margin-bottom: 1.75rem; max-width: 30rem; }
+.cards-trio { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 52rem) { .split-grid { grid-template-columns: 1fr; } }
+@media (max-width: 30rem) {
+  .cards-trio { gap: .75rem; }
+  .cards-trio .card-name { font-size: 1rem; }
+  .cards-trio .card-role { display: none; }
+}
 
 .band { background: var(--charcoal); color: #ece9e2; border-top: 3px solid var(--taupe); }
 .band h2 { color: #fff; font-size: var(--step-3); }
@@ -255,6 +264,6 @@ input[type="search"]:focus, select:focus { outline: var(--focus); outline-offset
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 @media print {
-  .site-header, .site-footer, .pager, .classmates, .filters, .letters, .seal-divider, .hero-bg { display: none; }
+  .site-header, .site-footer, .pager, .classmates, .filters, .letters, .hero-bg { display: none; }
   body { background: #fff; }
 }

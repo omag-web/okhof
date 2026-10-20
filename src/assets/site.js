@@ -13,6 +13,29 @@
     });
   }
 
+  /* Home page: show three random inductees on every visit */
+  var featured = document.getElementById("featured");
+  var pool = document.getElementById("featured-pool");
+  if (featured && pool) {
+    try {
+      var all = JSON.parse(pool.textContent);
+      for (var k = all.length - 1; k > 0; k--) {
+        var j = Math.floor(Math.random() * (k + 1));
+        var tmp = all[k]; all[k] = all[j]; all[j] = tmp;
+      }
+      var esc = function (t) {
+        return String(t).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; });
+      };
+      featured.innerHTML = all.slice(0, 3).map(function (i) {
+        return '<li class="card"><a href="' + esc(i.u) + '">' +
+          '<img class="portrait portrait-card" src="' + esc(i.p) + '" alt="Portrait of ' + esc(i.n) + '" decoding="async">' +
+          '<span class="card-body"><span class="card-name">' + esc(i.n) + '</span>' +
+          (i.r ? '<span class="card-role">' + esc(i.r) + '</span>' : '') +
+          '<span class="card-year">Class of ' + esc(i.y) + '</span></span></a></li>';
+      }).join("");
+    } catch (e) { /* keep the three chosen at build time */ }
+  }
+
   /* Inductee library */
   var results = document.getElementById("results");
   if (results && document.querySelector(".filters")) {
