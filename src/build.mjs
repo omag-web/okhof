@@ -332,14 +332,18 @@ function buildNews() {
 }
 
 function buildPhotos() {
+  const BATCH = 24;
   const items = photos.map((p, n) => {
-    const src = p.file ? u("/" + p.file) : p.remote;
+    const full = p.file ? u("/" + p.file) : p.remote;
+    const thumb = p.thumb ? u("/" + p.thumb) : full;
     const alt = p.caption || `Hall of Fame archive photo ${n + 1}`;
-    return `<li><button type="button" class="photo" data-full="${esc(src)}" data-caption="${esc(p.caption || "")}"><img src="${esc(src)}" alt="${esc(alt)}" loading="lazy" decoding="async"></button></li>`;
+    const dims = p.w && p.h ? ` width="${p.w}" height="${p.h}" style="--ar:${(p.w / p.h).toFixed(4)}"` : "";
+    return `<div class="m-item"${n >= BATCH ? " hidden" : ""}><button type="button" class="photo" data-full="${esc(full)}" data-caption="${esc(p.caption || "")}"><img src="${esc(thumb)}" alt="${esc(alt)}" loading="lazy" decoding="async"${dims}></button></div>`;
   }).join("");
-  const body = `${pageHead("Photo archive", photos.length ? `${photos.length} photos from past induction ceremonies and the Hall of Fame wall.` : "")}
+  const body = `${pageHead("Photo archive", "Photos from past induction ceremonies and the Hall of Fame wall. Select a photo to see it full size.")}
 <section class="section"><div class="wrap">
-  ${photos.length ? `<ul class="gallery">${items}</ul>` : `<p>The photo archive is being moved over.</p>`}
+  ${photos.length ? `<div class="masonry" id="gallery" data-batch="${BATCH}">${items}</div>
+  ${photos.length > BATCH ? `<p class="gallery-more"><button type="button" class="button" id="gallery-more">Show more photos</button></p>` : ""}` : `<p>The photo archive is being moved over.</p>`}
 </div></section>
 <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
   <figure><img alt=""><figcaption></figcaption></figure>

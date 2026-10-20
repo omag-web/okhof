@@ -239,10 +239,17 @@ input[type="search"]:focus, select:focus { outline: var(--focus); outline-offset
 .contact-card dd { margin: 0; min-width: 0; overflow-wrap: anywhere; }
 
 /* ---------- gallery ---------- */
-.gallery { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); gap: 6px; }
-.photo { display: block; width: 100%; padding: 0; border: 0; background: var(--stone-deep); cursor: zoom-in; }
-.photo img { width: 100%; aspect-ratio: 1; object-fit: cover; }
-.photo:hover img { opacity: .85; }
+/* Masonry: CSS columns without JavaScript; site.js upgrades it to fixed columns so "Show more" never reshuffles photos already shown */
+.masonry { columns: 4 14rem; column-gap: 8px; }
+.m-item { break-inside: avoid; margin-bottom: 8px; }
+.masonry.is-js { display: flex; gap: 8px; align-items: flex-start; columns: auto; }
+.m-col { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.masonry.is-js .m-item { margin: 0; }
+.photo { display: block; width: 100%; padding: 0; border: 0; background: var(--stone-deep); cursor: zoom-in; overflow: hidden; }
+.photo img { width: 100%; height: auto; aspect-ratio: var(--ar, auto); transition: transform .4s ease, opacity .2s ease; }
+.photo:hover img { transform: scale(1.03); }
+.photo:focus-visible { outline-offset: -3px; }
+.gallery-more { display: flex; justify-content: center; margin: 2rem 0 0; }
 .lightbox { border: 0; padding: 0; background: transparent; max-width: min(92vw, 70rem); width: 100%; }
 .lightbox::backdrop { background: rgba(34, 34, 34, .94); }
 .lightbox figure { margin: 0; }

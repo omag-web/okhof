@@ -2,651 +2,1041 @@
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860147650-ZWIYSMTSAZW6IA4477BW/1.JPG",
     "caption": "",
-    "file": "media/archive/001-1.jpg"
+    "file": "media/archive/001-1.jpg",
+    "w": 526,
+    "h": 800,
+    "thumb": "media/archive-thumbs/001-1.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860147649-RVOSKY60ISOPA5VGKKPO/2.JPG",
     "caption": "",
-    "file": "media/archive/002-2.jpg"
+    "file": "media/archive/002-2.jpg",
+    "w": 466,
+    "h": 712,
+    "thumb": "media/archive-thumbs/002-2.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860147987-R38IK3IOTLB4LRO6CSZQ/3.JPG",
     "caption": "",
-    "file": "media/archive/003-3.jpg"
+    "file": "media/archive/003-3.jpg",
+    "w": 797,
+    "h": 475,
+    "thumb": "media/archive-thumbs/003-3.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860148020-0EBPKPWCRZCJRXSHVQ5V/4.JPG",
     "caption": "",
-    "file": "media/archive/004-4.jpg"
+    "file": "media/archive/004-4.jpg",
+    "w": 554,
+    "h": 660,
+    "thumb": "media/archive-thumbs/004-4.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1593004160022-YEKQYHI7K5358FIXUJIX/DSC_0144a.jpg",
     "caption": "",
-    "file": "media/archive/005-dsc_0144a.jpg"
+    "file": "media/archive/005-dsc_0144a.jpg",
+    "w": 1500,
+    "h": 1004,
+    "thumb": "media/archive-thumbs/005-dsc_0144a.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860148342-2BRFNAY177TSN22RWKOK/5.JPG",
     "caption": "",
-    "file": "media/archive/006-5.jpg"
+    "file": "media/archive/006-5.jpg",
+    "w": 517,
+    "h": 556,
+    "thumb": "media/archive-thumbs/006-5.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860148692-2DOTOQG396ZWAPFPWJEA/6.JPG",
     "caption": "",
-    "file": "media/archive/007-6.jpg"
+    "file": "media/archive/007-6.jpg",
+    "w": 529,
+    "h": 501,
+    "thumb": "media/archive-thumbs/007-6.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860148726-5XQP76OYBFQNENND835Z/7.JPG",
     "caption": "",
-    "file": "media/archive/008-7.jpg"
+    "file": "media/archive/008-7.jpg",
+    "w": 664,
+    "h": 497,
+    "thumb": "media/archive-thumbs/008-7.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860149172-3L2MC0GUIXC9V7JNXGFG/8.JPG",
     "caption": "",
-    "file": "media/archive/009-8.jpg"
+    "file": "media/archive/009-8.jpg",
+    "w": 838,
+    "h": 516,
+    "thumb": "media/archive-thumbs/009-8.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860149120-TQW3IWFU1T8BE2VYBJQB/9.JPG",
     "caption": "",
-    "file": "media/archive/010-9.jpg"
+    "file": "media/archive/010-9.jpg",
+    "w": 852,
+    "h": 458,
+    "thumb": "media/archive-thumbs/010-9.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860149932-PWPQTF2Q2WT97AIN86RF/10.JPG",
     "caption": "",
-    "file": "media/archive/011-10.jpg"
+    "file": "media/archive/011-10.jpg",
+    "w": 846,
+    "h": 471,
+    "thumb": "media/archive-thumbs/011-10.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860149554-OSXZA0Z58B83V15HHI7W/11.JPG",
     "caption": "",
-    "file": "media/archive/012-11.jpg"
+    "file": "media/archive/012-11.jpg",
+    "w": 663,
+    "h": 496,
+    "thumb": "media/archive-thumbs/012-11.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860149875-3LDVP6OZ4W9NIKHCNHIG/12.JPG",
     "caption": "",
-    "file": "media/archive/013-12.jpg"
+    "file": "media/archive/013-12.jpg",
+    "w": 505,
+    "h": 585,
+    "thumb": "media/archive-thumbs/013-12.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860150278-KJXH6555KNUDM446TP8D/13.JPG",
     "caption": "",
-    "file": "media/archive/014-13.jpg"
+    "file": "media/archive/014-13.jpg",
+    "w": 496,
+    "h": 659,
+    "thumb": "media/archive-thumbs/014-13.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860150259-ASMYO84WDRQYS55IY065/14.JPG",
     "caption": "",
-    "file": "media/archive/015-14.jpg"
+    "file": "media/archive/015-14.jpg",
+    "w": 683,
+    "h": 497,
+    "thumb": "media/archive-thumbs/015-14.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860150598-ZTWT4BRWR8NIUNRHIRM9/15.JPG",
     "caption": "",
-    "file": "media/archive/016-15.jpg"
+    "file": "media/archive/016-15.jpg",
+    "w": 414,
+    "h": 390,
+    "thumb": "media/archive-thumbs/016-15.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860150939-Z2S9FOXXU61PWO1TVITZ/16.JPG",
     "caption": "",
-    "file": "media/archive/017-16.jpg"
+    "file": "media/archive/017-16.jpg",
+    "w": 755,
+    "h": 469,
+    "thumb": "media/archive-thumbs/017-16.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860151275-E3KUXOV1U98HPZ67J791/17.JPG",
     "caption": "",
-    "file": "media/archive/018-17.jpg"
+    "file": "media/archive/018-17.jpg",
+    "w": 737,
+    "h": 486,
+    "thumb": "media/archive-thumbs/018-17.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860151395-GVUYOT1MQFGMTW7UVLZ9/18.JPG",
     "caption": "",
-    "file": "media/archive/019-18.jpg"
+    "file": "media/archive/019-18.jpg",
+    "w": 584,
+    "h": 527,
+    "thumb": "media/archive-thumbs/019-18.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860151586-CVB7Y5GVDAC6BGVPNXP9/19.JPG",
     "caption": "",
-    "file": "media/archive/020-19.jpg"
+    "file": "media/archive/020-19.jpg",
+    "w": 680,
+    "h": 427,
+    "thumb": "media/archive-thumbs/020-19.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860151691-OTR36DW6V92DELHDLLGI/20.JPG",
     "caption": "",
-    "file": "media/archive/021-20.jpg"
+    "file": "media/archive/021-20.jpg",
+    "w": 572,
+    "h": 476,
+    "thumb": "media/archive-thumbs/021-20.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860151900-RJJX1930FXGFHBDFT5FJ/21.JPG",
     "caption": "",
-    "file": "media/archive/022-21.jpg"
+    "file": "media/archive/022-21.jpg",
+    "w": 582,
+    "h": 525,
+    "thumb": "media/archive-thumbs/022-21.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860152039-CW9GC4FVC8DVFRGVO0HQ/22.JPG",
     "caption": "",
-    "file": "media/archive/023-22.jpg"
+    "file": "media/archive/023-22.jpg",
+    "w": 509,
+    "h": 555,
+    "thumb": "media/archive-thumbs/023-22.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860152197-SXXGFWY4P6ZJII74I86Y/23.JPG",
     "caption": "",
-    "file": "media/archive/024-23.jpg"
+    "file": "media/archive/024-23.jpg",
+    "w": 751,
+    "h": 511,
+    "thumb": "media/archive-thumbs/024-23.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860153062-76UHY9MLE4LXK1X1MH4G/24.JPG",
     "caption": "",
-    "file": "media/archive/025-24.jpg"
+    "file": "media/archive/025-24.jpg",
+    "w": 497,
+    "h": 585,
+    "thumb": "media/archive-thumbs/025-24.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860152602-RC027ST3W2MOOL5QD6Q3/25.JPG",
     "caption": "",
-    "file": "media/archive/026-25.jpg"
+    "file": "media/archive/026-25.jpg",
+    "w": 435,
+    "h": 617,
+    "thumb": "media/archive-thumbs/026-25.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860152943-0LA4GRT1NHI5IRMXRYXZ/26.JPG",
     "caption": "",
-    "file": "media/archive/027-26.jpg"
+    "file": "media/archive/027-26.jpg",
+    "w": 780,
+    "h": 465,
+    "thumb": "media/archive-thumbs/027-26.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860153320-ZHSPIJATHWT5KJBR4LDL/27.JPG",
     "caption": "",
-    "file": "media/archive/028-27.jpg"
+    "file": "media/archive/028-27.jpg",
+    "w": 789,
+    "h": 473,
+    "thumb": "media/archive-thumbs/028-27.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860153403-P5HPG9V5ED8V6YMFSZRL/28.JPG",
     "caption": "",
-    "file": "media/archive/029-28.jpg"
+    "file": "media/archive/029-28.jpg",
+    "w": 831,
+    "h": 505,
+    "thumb": "media/archive-thumbs/029-28.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860154323-85USXE77B85AOY9PKKJY/29.JPG",
     "caption": "",
-    "file": "media/archive/030-29.jpg"
+    "file": "media/archive/030-29.jpg",
+    "w": 779,
+    "h": 515,
+    "thumb": "media/archive-thumbs/030-29.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860154323-FEBEPNFR2WYM6S1OUU83/30.JPG",
     "caption": "",
-    "file": "media/archive/031-30.jpg"
+    "file": "media/archive/031-30.jpg",
+    "w": 504,
+    "h": 461,
+    "thumb": "media/archive-thumbs/031-30.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860154882-J6V68IZJEB17KTPOK86D/31.JPG",
     "caption": "",
-    "file": "media/archive/032-31.jpg"
+    "file": "media/archive/032-31.jpg",
+    "w": 453,
+    "h": 499,
+    "thumb": "media/archive-thumbs/032-31.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860154908-D3FQ3E1N2E4TP9W513H1/32.JPG",
     "caption": "",
-    "file": "media/archive/033-32.jpg"
+    "file": "media/archive/033-32.jpg",
+    "w": 779,
+    "h": 551,
+    "thumb": "media/archive-thumbs/033-32.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860155302-Q6EJB7PNFRL5A33EQX67/33.JPG",
     "caption": "",
-    "file": "media/archive/034-33.jpg"
+    "file": "media/archive/034-33.jpg",
+    "w": 508,
+    "h": 573,
+    "thumb": "media/archive-thumbs/034-33.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860155338-I2JY00SWRXSSDU19E5YZ/34.JPG",
     "caption": "",
-    "file": "media/archive/035-34.jpg"
+    "file": "media/archive/035-34.jpg",
+    "w": 805,
+    "h": 486,
+    "thumb": "media/archive-thumbs/035-34.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860155672-4IJZAJIG5RFN2FREIV19/35.JPG",
     "caption": "",
-    "file": "media/archive/036-35.jpg"
+    "file": "media/archive/036-35.jpg",
+    "w": 684,
+    "h": 511,
+    "thumb": "media/archive-thumbs/036-35.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860155747-8Y7GUHK6PGQ1GFFNXI16/36.JPG",
     "caption": "",
-    "file": "media/archive/037-36.jpg"
+    "file": "media/archive/037-36.jpg",
+    "w": 719,
+    "h": 511,
+    "thumb": "media/archive-thumbs/037-36.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860155997-59PIA0A5N77C9ZLMIVRN/37.JPG",
     "caption": "",
-    "file": "media/archive/038-37.jpg"
+    "file": "media/archive/038-37.jpg",
+    "w": 719,
+    "h": 475,
+    "thumb": "media/archive-thumbs/038-37.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860156217-HV6FXYKQW9RYT1RZ986O/38.JPG",
     "caption": "",
-    "file": "media/archive/039-38.jpg"
+    "file": "media/archive/039-38.jpg",
+    "w": 669,
+    "h": 522,
+    "thumb": "media/archive-thumbs/039-38.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860156411-W91RBMS7SCMTH51E833M/39.JPG",
     "caption": "",
-    "file": "media/archive/040-39.jpg"
+    "file": "media/archive/040-39.jpg",
+    "w": 472,
+    "h": 520,
+    "thumb": "media/archive-thumbs/040-39.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860156912-ZPTD65MS88XT2BPEDZQN/40.JPG",
     "caption": "",
-    "file": "media/archive/041-40.jpg"
+    "file": "media/archive/041-40.jpg",
+    "w": 570,
+    "h": 664,
+    "thumb": "media/archive-thumbs/041-40.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860156973-HTF891T92OF7MA8BESY9/41.JPG",
     "caption": "",
-    "file": "media/archive/042-41.jpg"
+    "file": "media/archive/042-41.jpg",
+    "w": 854,
+    "h": 522,
+    "thumb": "media/archive-thumbs/042-41.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860157253-UK29V53QKADS9IHMKT9J/42.JPG",
     "caption": "",
-    "file": "media/archive/043-42.jpg"
+    "file": "media/archive/043-42.jpg",
+    "w": 851,
+    "h": 528,
+    "thumb": "media/archive-thumbs/043-42.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860158761-A64QFFSNA0N6AC60BSX4/CZ2D2047.jpg",
     "caption": "",
-    "file": "media/archive/044-cz2d2047.jpg"
+    "file": "media/archive/044-cz2d2047.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/044-cz2d2047.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860158906-3PWI8PRO1BICEWQOW1LQ/CZ2D2052.jpg",
     "caption": "",
-    "file": "media/archive/045-cz2d2052.jpg"
+    "file": "media/archive/045-cz2d2052.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/045-cz2d2052.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860160171-VV2BP5DD84YG7KQVECVY/CZ2D2053.jpg",
     "caption": "",
-    "file": "media/archive/046-cz2d2053.jpg"
+    "file": "media/archive/046-cz2d2053.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/046-cz2d2053.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860160532-JNQ41MWZO53EVV4I4511/CZ2D2055.jpg",
     "caption": "",
-    "file": "media/archive/047-cz2d2055.jpg"
+    "file": "media/archive/047-cz2d2055.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/047-cz2d2055.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860161051-5BKNQBE3JJU4C07QKWRN/CZ2D2057.jpg",
     "caption": "",
-    "file": "media/archive/048-cz2d2057.jpg"
+    "file": "media/archive/048-cz2d2057.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/048-cz2d2057.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860162463-HL9GR8ATFYVNXCYWZAAE/CZ2D2058.jpg",
     "caption": "",
-    "file": "media/archive/049-cz2d2058.jpg"
+    "file": "media/archive/049-cz2d2058.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/049-cz2d2058.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860162769-TCH55JWUZ5OM01RNNPRL/CZ2D2059.jpg",
     "caption": "",
-    "file": "media/archive/050-cz2d2059.jpg"
+    "file": "media/archive/050-cz2d2059.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/050-cz2d2059.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860164182-62TEQDWCLR047S5DZZ4F/CZ2D2062.jpg",
     "caption": "",
-    "file": "media/archive/051-cz2d2062.jpg"
+    "file": "media/archive/051-cz2d2062.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/051-cz2d2062.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860164037-ZC4NZQEHMRWMOHJII4HY/CZ2D2063.jpg",
     "caption": "",
-    "file": "media/archive/052-cz2d2063.jpg"
+    "file": "media/archive/052-cz2d2063.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/052-cz2d2063.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860165223-7FNR8FLOIY0JMT7Z7T14/CZ2D2064.jpg",
     "caption": "",
-    "file": "media/archive/053-cz2d2064.jpg"
+    "file": "media/archive/053-cz2d2064.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/053-cz2d2064.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860166233-3KFR5ANQRDJC8D6LO6Y0/CZ2D2065.jpg",
     "caption": "",
-    "file": "media/archive/054-cz2d2065.jpg"
+    "file": "media/archive/054-cz2d2065.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/054-cz2d2065.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860167061-ZGZ8Y6MPXSFJED6QSV5O/CZ2D2066.jpg",
     "caption": "",
-    "file": "media/archive/055-cz2d2066.jpg"
+    "file": "media/archive/055-cz2d2066.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/055-cz2d2066.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860167936-9EOGK285DIE7PZTENBJ4/CZ2D2068.jpg",
     "caption": "",
-    "file": "media/archive/056-cz2d2068.jpg"
+    "file": "media/archive/056-cz2d2068.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/056-cz2d2068.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860168895-8PML1FZQI8LS36EXTGN8/CZ2D2069.jpg",
     "caption": "",
-    "file": "media/archive/057-cz2d2069.jpg"
+    "file": "media/archive/057-cz2d2069.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/057-cz2d2069.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860170561-B4J9YHELCEKH9F631VLC/CZ2D2070.jpg",
     "caption": "",
-    "file": "media/archive/058-cz2d2070.jpg"
+    "file": "media/archive/058-cz2d2070.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/058-cz2d2070.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860170992-QEMD4W6RQCOSPY6HXWZN/CZ2D2071.jpg",
     "caption": "",
-    "file": "media/archive/059-cz2d2071.jpg"
+    "file": "media/archive/059-cz2d2071.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/059-cz2d2071.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860171494-XRFHWJZDBWOZG4IKUD2R/CZ2D2072.jpg",
     "caption": "",
-    "file": "media/archive/060-cz2d2072.jpg"
+    "file": "media/archive/060-cz2d2072.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/060-cz2d2072.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860172587-SNAY8F0KD355O6Y5QKNH/CZ2D2073.jpg",
     "caption": "",
-    "file": "media/archive/061-cz2d2073.jpg"
+    "file": "media/archive/061-cz2d2073.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/061-cz2d2073.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860172857-X4AMQK70IGDG2RY2D54C/CZ2D2076.jpg",
     "caption": "",
-    "file": "media/archive/062-cz2d2076.jpg"
+    "file": "media/archive/062-cz2d2076.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/062-cz2d2076.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860173842-43PH6IVRCT0AWOPTLT9P/CZ2D2079.jpg",
     "caption": "",
-    "file": "media/archive/063-cz2d2079.jpg"
+    "file": "media/archive/063-cz2d2079.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/063-cz2d2079.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860174315-M56PE0RYWRI5QV3H7C0B/CZ2D2080.jpg",
     "caption": "",
-    "file": "media/archive/064-cz2d2080.jpg"
+    "file": "media/archive/064-cz2d2080.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/064-cz2d2080.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860174998-18P9K31P7NOOJ9EIQ5D1/CZ2D2081.jpg",
     "caption": "",
-    "file": "media/archive/065-cz2d2081.jpg"
+    "file": "media/archive/065-cz2d2081.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/065-cz2d2081.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860175332-H1OG0OT2940YAFYO0N4I/CZ2D2082.jpg",
     "caption": "",
-    "file": "media/archive/066-cz2d2082.jpg"
+    "file": "media/archive/066-cz2d2082.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/066-cz2d2082.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860176538-WV5MOVHKKE7XTNXYNZ06/CZ2D2083.jpg",
     "caption": "",
-    "file": "media/archive/067-cz2d2083.jpg"
+    "file": "media/archive/067-cz2d2083.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/067-cz2d2083.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860177169-BOBGRVFK9JBJWYZFJJXG/CZ2D2084.jpg",
     "caption": "",
-    "file": "media/archive/068-cz2d2084.jpg"
+    "file": "media/archive/068-cz2d2084.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/068-cz2d2084.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860177751-JBIAZTDHS6CHBN65CZ9Z/CZ2D2086.jpg",
     "caption": "",
-    "file": "media/archive/069-cz2d2086.jpg"
+    "file": "media/archive/069-cz2d2086.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/069-cz2d2086.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860178380-SH8CNXXW3FRXU4NGG7XR/CZ2D2087.jpg",
     "caption": "",
-    "file": "media/archive/070-cz2d2087.jpg"
+    "file": "media/archive/070-cz2d2087.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/070-cz2d2087.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860179374-UJN83FNQUYSKTSEZM5HY/CZ2D2088.jpg",
     "caption": "",
-    "file": "media/archive/071-cz2d2088.jpg"
+    "file": "media/archive/071-cz2d2088.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/071-cz2d2088.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860180203-F2IQQG9OZCFRMRVT2CM4/CZ2D2089.jpg",
     "caption": "",
-    "file": "media/archive/072-cz2d2089.jpg"
+    "file": "media/archive/072-cz2d2089.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/072-cz2d2089.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860180763-KMDU8MUZKYFRX4FCL96U/CZ2D2091.jpg",
     "caption": "",
-    "file": "media/archive/073-cz2d2091.jpg"
+    "file": "media/archive/073-cz2d2091.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/073-cz2d2091.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860182999-5NQ0EPYLAMDQJNHAE1Y2/CZ2D2092.jpg",
     "caption": "",
-    "file": "media/archive/074-cz2d2092.jpg"
+    "file": "media/archive/074-cz2d2092.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/074-cz2d2092.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860183099-KT4QZ895DIZT7QYV9EKX/CZ2D2094.jpg",
     "caption": "",
-    "file": "media/archive/075-cz2d2094.jpg"
+    "file": "media/archive/075-cz2d2094.jpg",
+    "w": 1500,
+    "h": 1000,
+    "thumb": "media/archive-thumbs/075-cz2d2094.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860197951-T2G6TFIVQU29PX7CMECQ/DSC_0348.JPG",
     "caption": "",
-    "file": "media/archive/076-dsc_0348.jpg"
+    "file": "media/archive/076-dsc_0348.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/076-dsc_0348.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860198565-TQ6RPA4JZCWDZPAZNNI3/DSC_0349.JPG",
     "caption": "",
-    "file": "media/archive/077-dsc_0349.jpg"
+    "file": "media/archive/077-dsc_0349.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/077-dsc_0349.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860211040-9WWU0C23BU4YJ3R4NQMD/DSC_0351.JPG",
     "caption": "",
-    "file": "media/archive/078-dsc_0351.jpg"
+    "file": "media/archive/078-dsc_0351.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/078-dsc_0351.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860211792-7DNO8ZV2XOT0HHJ96V9W/DSC_0352.JPG",
     "caption": "",
-    "file": "media/archive/079-dsc_0352.jpg"
+    "file": "media/archive/079-dsc_0352.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/079-dsc_0352.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860221277-0JSKKALOZT479I8AMJEX/DSC_0354.JPG",
     "caption": "",
-    "file": "media/archive/080-dsc_0354.jpg"
+    "file": "media/archive/080-dsc_0354.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/080-dsc_0354.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860223054-XOURJPDYCD61QL181K1J/DSC_0356.JPG",
     "caption": "",
-    "file": "media/archive/081-dsc_0356.jpg"
+    "file": "media/archive/081-dsc_0356.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/081-dsc_0356.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860232036-VI80BAZQIK37HF8D1P4J/DSC_0358.JPG",
     "caption": "",
-    "file": "media/archive/082-dsc_0358.jpg"
+    "file": "media/archive/082-dsc_0358.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/082-dsc_0358.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860236729-WEBRPP13H8I7BRQODEDP/DSC_0360.JPG",
     "caption": "",
-    "file": "media/archive/083-dsc_0360.jpg"
+    "file": "media/archive/083-dsc_0360.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/083-dsc_0360.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860255125-MVOVB8RVFIJOBVSDDFRV/DSC_0364.JPG",
     "caption": "",
-    "file": "media/archive/084-dsc_0364.jpg"
+    "file": "media/archive/084-dsc_0364.jpg",
+    "w": 1500,
+    "h": 2258,
+    "thumb": "media/archive-thumbs/084-dsc_0364.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860255081-T6DDRQDR7FI9FWSNGNZG/DSC_0366.JPG",
     "caption": "",
-    "file": "media/archive/085-dsc_0366.jpg"
+    "file": "media/archive/085-dsc_0366.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/085-dsc_0366.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860266337-JGYKE0T296T73SQUW413/DSC_0367.JPG",
     "caption": "",
-    "file": "media/archive/086-dsc_0367.jpg"
+    "file": "media/archive/086-dsc_0367.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/086-dsc_0367.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860265985-4JX5QRSQYMT0VUFSJFRZ/DSC_0368.JPG",
     "caption": "",
-    "file": "media/archive/087-dsc_0368.jpg"
+    "file": "media/archive/087-dsc_0368.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/087-dsc_0368.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860278772-8Q3ZRR8LZCQFFT4ZWNZX/DSC_0369.JPG",
     "caption": "",
-    "file": "media/archive/088-dsc_0369.jpg"
+    "file": "media/archive/088-dsc_0369.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/088-dsc_0369.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860277818-W9CV9A0UHGPELF14HUJR/DSC_0371.JPG",
     "caption": "",
-    "file": "media/archive/089-dsc_0371.jpg"
+    "file": "media/archive/089-dsc_0371.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/089-dsc_0371.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860287022-PK1L0HDV7IVFHO7OINGQ/DSC_0372.JPG",
     "caption": "",
-    "file": "media/archive/090-dsc_0372.jpg"
+    "file": "media/archive/090-dsc_0372.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/090-dsc_0372.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860290164-6DF3C1T8Z6YU7NH3G1PC/DSC_0373.JPG",
     "caption": "",
-    "file": "media/archive/091-dsc_0373.jpg"
+    "file": "media/archive/091-dsc_0373.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/091-dsc_0373.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860298083-RWW83XHECVWYNM4CDFIE/DSC_0375.JPG",
     "caption": "",
-    "file": "media/archive/092-dsc_0375.jpg"
+    "file": "media/archive/092-dsc_0375.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/092-dsc_0375.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860305296-37BD7TCE3VOMHT1UB0OD/DSC_0379.JPG",
     "caption": "",
-    "file": "media/archive/093-dsc_0379.jpg"
+    "file": "media/archive/093-dsc_0379.jpg",
+    "w": 1500,
+    "h": 2258,
+    "thumb": "media/archive-thumbs/093-dsc_0379.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860314342-6ISRNX09MAS7DWW8DQFO/DSC_0386.JPG",
     "caption": "",
-    "file": "media/archive/094-dsc_0386.jpg"
+    "file": "media/archive/094-dsc_0386.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/094-dsc_0386.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860315249-J3Q0QMV111Q2DSMC1FF3/DSC_0389.JPG",
     "caption": "",
-    "file": "media/archive/095-dsc_0389.jpg"
+    "file": "media/archive/095-dsc_0389.jpg",
+    "w": 1500,
+    "h": 999,
+    "thumb": "media/archive-thumbs/095-dsc_0389.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860328291-ZEGYYXK6B0LP48S7DRBL/DSC_0391.JPG",
     "caption": "",
-    "file": "media/archive/096-dsc_0391.jpg"
+    "file": "media/archive/096-dsc_0391.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/096-dsc_0391.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860329337-I8MZUSG617JMID4DNA7C/DSC_0392.JPG",
     "caption": "",
-    "file": "media/archive/097-dsc_0392.jpg"
+    "file": "media/archive/097-dsc_0392.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/097-dsc_0392.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860341647-089TU76K8QJH9YDA48YK/DSC_0393.JPG",
     "caption": "",
-    "file": "media/archive/098-dsc_0393.jpg"
+    "file": "media/archive/098-dsc_0393.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/098-dsc_0393.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860341373-5AC9SHRC6U1MWR84B8S6/DSC_0395.JPG",
     "caption": "",
-    "file": "media/archive/099-dsc_0395.jpg"
+    "file": "media/archive/099-dsc_0395.jpg",
+    "w": 1500,
+    "h": 996,
+    "thumb": "media/archive-thumbs/099-dsc_0395.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592860348655-4CE3MSTOQLO9OL6OHK1P/DSC_0401.JPG",
     "caption": "",
-    "file": "media/archive/100-dsc_0401.jpg"
+    "file": "media/archive/100-dsc_0401.jpg",
+    "w": 1500,
+    "h": 2258,
+    "thumb": "media/archive-thumbs/100-dsc_0401.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592918080309-DCOJLAAYMMYAFKPP90AX/Burdge-Rivera.jpg",
     "caption": "Burdge Rivera",
-    "file": "media/archive/101-burdge-rivera.jpg"
+    "file": "media/archive/101-burdge-rivera.jpg",
+    "w": 1268,
+    "h": 863,
+    "thumb": "media/archive-thumbs/101-burdge-rivera.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592918124703-1SWGRUHMSQTVRS2A7J08/DSC_0113.JPG",
     "caption": "",
-    "file": "media/archive/102-dsc_0113.jpg"
+    "file": "media/archive/102-dsc_0113.jpg",
+    "w": 1500,
+    "h": 1004,
+    "thumb": "media/archive-thumbs/102-dsc_0113.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592918123729-CSPVI3PZRAT0SDKMKE9K/DSC_0115.JPG",
     "caption": "",
-    "file": "media/archive/103-dsc_0115.jpg"
+    "file": "media/archive/103-dsc_0115.jpg",
+    "w": 1500,
+    "h": 1004,
+    "thumb": "media/archive-thumbs/103-dsc_0115.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592918139043-R68UA2HB51NFBMCZXH85/DSC_0116.JPG",
     "caption": "",
-    "file": "media/archive/104-dsc_0116.jpg"
+    "file": "media/archive/104-dsc_0116.jpg",
+    "w": 1500,
+    "h": 1004,
+    "thumb": "media/archive-thumbs/104-dsc_0116.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592918142591-BE01TU4V9XG0FRHZXF09/DSC_0118.JPG",
     "caption": "",
-    "file": "media/archive/105-dsc_0118.jpg"
+    "file": "media/archive/105-dsc_0118.jpg",
+    "w": 1500,
+    "h": 1004,
+    "thumb": "media/archive-thumbs/105-dsc_0118.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592918150667-CE144TAI93264GOVDV2H/DSC_0122.JPG",
     "caption": "",
-    "file": "media/archive/106-dsc_0122.jpg"
+    "file": "media/archive/106-dsc_0122.jpg",
+    "w": 1500,
+    "h": 1004,
+    "thumb": "media/archive-thumbs/106-dsc_0122.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592918155861-RALGR0HT4J0Z75XVGBKT/DSC_0126.JPG",
     "caption": "",
-    "file": "media/archive/107-dsc_0126.jpg"
+    "file": "media/archive/107-dsc_0126.jpg",
+    "w": 1500,
+    "h": 1004,
+    "thumb": "media/archive-thumbs/107-dsc_0126.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592918165033-Z2VD8O3NV0F6EZCX4NJS/DSC_0013.JPG",
     "caption": "",
-    "file": "media/archive/108-dsc_0013.jpg"
+    "file": "media/archive/108-dsc_0013.jpg",
+    "w": 1500,
+    "h": 1004,
+    "thumb": "media/archive-thumbs/108-dsc_0013.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592918171214-4U5U4M524KHW0YPNHGQ7/DSC_0015.JPG",
     "caption": "",
-    "file": "media/archive/109-dsc_0015.jpg"
+    "file": "media/archive/109-dsc_0015.jpg",
+    "w": 1500,
+    "h": 1004,
+    "thumb": "media/archive-thumbs/109-dsc_0015.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592918181377-38LQRL939OG5GUWJYMLA/DSC_0017.JPG",
     "caption": "",
-    "file": "media/archive/110-dsc_0017.jpg"
+    "file": "media/archive/110-dsc_0017.jpg",
+    "w": 1500,
+    "h": 1004,
+    "thumb": "media/archive-thumbs/110-dsc_0017.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592918186479-RIC13MVHHJ63I6HIQ7CA/DSC_0022.JPG",
     "caption": "",
-    "file": "media/archive/111-dsc_0022.jpg"
+    "file": "media/archive/111-dsc_0022.jpg",
+    "w": 1500,
+    "h": 1004,
+    "thumb": "media/archive-thumbs/111-dsc_0022.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592918197634-W4E52TKWSTDS5LOBMD3Z/DSC_0025.JPG",
     "caption": "",
-    "file": "media/archive/112-dsc_0025.jpg"
+    "file": "media/archive/112-dsc_0025.jpg",
+    "w": 1500,
+    "h": 1004,
+    "thumb": "media/archive-thumbs/112-dsc_0025.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1592918200882-HOBBGTFJMKS4XMQN1BMJ/DSC_0027.JPG",
     "caption": "",
-    "file": "media/archive/113-dsc_0027.jpg"
+    "file": "media/archive/113-dsc_0027.jpg",
+    "w": 1500,
+    "h": 1004,
+    "thumb": "media/archive-thumbs/113-dsc_0027.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1638392911042-UUKE52XEJYUXNXSUIMU6/Bradley+at+Wall.jpg",
     "caption": "Bradley+at+Wall",
-    "file": "media/archive/114-bradley-at-wall.jpg"
+    "file": "media/archive/114-bradley-at-wall.jpg",
+    "w": 1270,
+    "h": 1598,
+    "thumb": "media/archive-thumbs/114-bradley-at-wall.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1638392911042-W6Z9KBFYF7KNE4BOQ35W/Crosby+at+wall.jpg",
     "caption": "Crosby+at+wall",
-    "file": "media/archive/115-crosby-at-wall.jpg"
+    "file": "media/archive/115-crosby-at-wall.jpg",
+    "w": 1245,
+    "h": 1562,
+    "thumb": "media/archive-thumbs/115-crosby-at-wall.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1638392911524-210GTWG6510VR0FDO718/IMG_8063+%282%29.jpg",
     "caption": "IMG 8063+",
-    "file": "media/archive/116-img_8063-2-.jpg"
+    "file": "media/archive/116-img_8063-2-.jpg",
+    "w": 1318,
+    "h": 1512,
+    "thumb": "media/archive-thumbs/116-img_8063-2-.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1638392911598-K9BHM4UD3ZX4KVEDMN8A/OK+Gov+Hall+-+Class+of+2021.jpg",
     "caption": "OK+Gov+Hall+ +Class+of+2021",
-    "file": "media/archive/117-ok-gov-hall---class-of-2021.jpg"
+    "file": "media/archive/117-ok-gov-hall---class-of-2021.jpg",
+    "w": 1500,
+    "h": 844,
+    "thumb": "media/archive-thumbs/117-ok-gov-hall---class-of-2021.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1638392911986-CCM4QZ6725GGNEJCCLCO/Ross+at+wall.jpg",
     "caption": "Ross+at+wall",
-    "file": "media/archive/118-ross-at-wall.jpg"
+    "file": "media/archive/118-ross-at-wall.jpg",
+    "w": 1438,
+    "h": 1634,
+    "thumb": "media/archive-thumbs/118-ross-at-wall.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1691519290925-UNKN4FG018NIKLLMGGBL/IMG_1529.JPG",
     "caption": "",
-    "file": "media/archive/119-img_1529.jpg"
+    "file": "media/archive/119-img_1529.jpg",
+    "w": 1500,
+    "h": 2666,
+    "thumb": "media/archive-thumbs/119-img_1529.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1691519286658-SGDLT261A72DCWC5JQJA/IMG_1530.JPG",
     "caption": "",
-    "file": "media/archive/120-img_1530.jpg"
+    "file": "media/archive/120-img_1530.jpg",
+    "w": 1500,
+    "h": 844,
+    "thumb": "media/archive-thumbs/120-img_1530.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1691519303611-5BSD5SPT5GWNCQ1CVXQW/IMG_1531.JPG",
     "caption": "",
-    "file": "media/archive/121-img_1531.jpg"
+    "file": "media/archive/121-img_1531.jpg",
+    "w": 1500,
+    "h": 844,
+    "thumb": "media/archive-thumbs/121-img_1531.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1691519303156-1IOPXC6WPW4TWZDYF9UK/IMG_1532.JPG",
     "caption": "",
-    "file": "media/archive/122-img_1532.jpg"
+    "file": "media/archive/122-img_1532.jpg",
+    "w": 1500,
+    "h": 844,
+    "thumb": "media/archive-thumbs/122-img_1532.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1691519315055-YV77R1TF0512NR8JEUH8/IMG_1533.JPG",
     "caption": "",
-    "file": "media/archive/123-img_1533.jpg"
+    "file": "media/archive/123-img_1533.jpg",
+    "w": 1500,
+    "h": 2666,
+    "thumb": "media/archive-thumbs/123-img_1533.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1691519315850-SM16DQ5YCAA6D4Q37N1M/IMG_1534.JPG",
     "caption": "",
-    "file": "media/archive/124-img_1534.jpg"
+    "file": "media/archive/124-img_1534.jpg",
+    "w": 1500,
+    "h": 2666,
+    "thumb": "media/archive-thumbs/124-img_1534.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1691519327029-B73BORLLZOU3SLFYMY7U/IMG_1535.JPG",
     "caption": "",
-    "file": "media/archive/125-img_1535.jpg"
+    "file": "media/archive/125-img_1535.jpg",
+    "w": 1500,
+    "h": 844,
+    "thumb": "media/archive-thumbs/125-img_1535.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1691519332900-NUFOX5FMPGB2L66BVF6S/IMG_1536.JPG",
     "caption": "",
-    "file": "media/archive/126-img_1536.jpg"
+    "file": "media/archive/126-img_1536.jpg",
+    "w": 1500,
+    "h": 844,
+    "thumb": "media/archive-thumbs/126-img_1536.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1691519334295-R22U66UFDAI4WERTJQRA/IMG_1537.JPG",
     "caption": "",
-    "file": "media/archive/127-img_1537.jpg"
+    "file": "media/archive/127-img_1537.jpg",
+    "w": 1500,
+    "h": 2666,
+    "thumb": "media/archive-thumbs/127-img_1537.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1691519345055-A936UFCU8OOMOIMV3H9N/IMG_1538.JPG",
     "caption": "",
-    "file": "media/archive/128-img_1538.jpg"
+    "file": "media/archive/128-img_1538.jpg",
+    "w": 1500,
+    "h": 2666,
+    "thumb": "media/archive-thumbs/128-img_1538.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1691519346334-CNUQZYQKP7YGIS21X7QU/IMG_1539.JPG",
     "caption": "",
-    "file": "media/archive/129-img_1539.jpg"
+    "file": "media/archive/129-img_1539.jpg",
+    "w": 1500,
+    "h": 2666,
+    "thumb": "media/archive-thumbs/129-img_1539.webp"
   },
   {
     "remote": "https://images.squarespace-cdn.com/content/v1/5eb2e2f5123bc54d6e3e60c6/1691519357037-BABFJ6RZRSQZUQERSQF0/IMG_1540.JPG",
     "caption": "",
-    "file": "media/archive/130-img_1540.jpg"
+    "file": "media/archive/130-img_1540.jpg",
+    "w": 1500,
+    "h": 2666,
+    "thumb": "media/archive-thumbs/130-img_1540.webp"
   }
 ]
