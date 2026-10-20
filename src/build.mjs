@@ -350,14 +350,14 @@ function buildPhotos() {
 function buildContact() {
   const c = site.contact;
   const body = `${pageHead("Contact", "Questions about nominations, inductees or the foundation go to the Foundation Secretary.")}
-<section class="section"><div class="wrap narrow contact-card">
+<section class="section"><div class="wrap narrow"><div class="contact-card">
   <p class="contact-name">${esc(c.person)}<span>${esc(c.role)}</span></p>
   <dl>
     <dt>Phone</dt><dd><a href="tel:${c.phoneHref}">${esc(c.phone)}</a></dd>
     <dt>Email</dt><dd><a href="mailto:${c.email}">${esc(c.email)}</a></dd>
     <dt>Mail</dt><dd>${esc(site.name)}<br>${esc(c.street)}<br>${esc(c.city)}, ${c.state} ${c.zip}</dd>
   </dl>
-</div></section>`;
+</div></div></section>`;
   write("contact/index.html", layout({ title: "Contact", path: "/contact/", body, active: "/contact/" }));
 }
 
