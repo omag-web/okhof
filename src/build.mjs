@@ -209,22 +209,16 @@ function fill(tpl) {
 
 /* ---------- pages ---------- */
 function buildHome() {
-  const wall = years.map((y) => `<li><a href="${u(`/class/${y}/`)}"><span class="wall-year">${y}</span><span class="wall-count">${plural(byYear[y].length, "inductee")}</span></a></li>`).join("");
   const latest = byYear[latestYear];
   const body = `
-<section class="hero"><div class="wrap hero-grid">
-  <div class="hero-copy">
-    <h1>Honoring the people who built Oklahoma's cities and towns.</h1>
-    <p>Since ${site.firstClass}, the Hall of Fame has inducted ${inductees.length} mayors, managers, clerks, council members and public servants whose work strengthened municipal government across the state.</p>
-    <form class="hero-search" action="${u("/inductees/")}" role="search">
-      <label for="hero-q">Find an inductee</label>
-      <div class="search-row"><input id="hero-q" name="q" type="search" placeholder="Name or city" autocomplete="off"><button type="submit">Search</button></div>
-    </form>
-  </div>
-  <div class="wall-wrap">
-    <h2 class="wall-title">Browse by class</h2>
-    <ol class="wall" reversed>${wall}</ol>
-  </div>
+<section class="hero"><div class="wrap">
+  <h1>Honoring the people who built Oklahoma's cities and towns.</h1>
+  <p class="hero-lede">Since ${site.firstClass}, the Hall of Fame has inducted ${inductees.length} mayors, managers, clerks, council members and public servants whose work strengthened municipal government across the state.</p>
+  <form class="hero-search" action="${u("/inductees/")}" role="search">
+    <label for="hero-q">Find an inductee</label>
+    <div class="search-row"><input id="hero-q" name="q" type="search" placeholder="Name or town" autocomplete="off"><button type="submit">Search</button></div>
+  </form>
+  <p class="hero-browse"><a href="${u("/inductees/")}">Browse all ${inductees.length} inductees</a></p>
 </div></section>
 
 <section class="section latest"><div class="wrap">
@@ -238,24 +232,9 @@ function buildHome() {
 <section class="section band"><div class="wrap band-grid">
   <div>
     <h2>Know someone who belongs here?</h2>
-    <p>Nominations are open to anyone who has served an Oklahoma city, town, public trust or municipal organization with distinction and unquestioned ethics. Up to ${site.nomination.maxPerYear} officials are inducted each year.</p>
+    <p>Nominations are open to anyone who has served an Oklahoma city, town, public trust or municipal organization with distinction and unquestioned ethics. Nominations close ${esc(site.nomination.deadline)} each year.</p>
   </div>
-  <div class="band-action">
-    <p class="deadline"><span>Nominations close</span> ${esc(site.nomination.deadline)}</p>
-    <a class="button" href="${u("/nominate/")}">How to nominate</a>
-  </div>
-</div></section>
-
-<section class="section about"><div class="wrap about-grid">
-  <div>
-    <h2>Why it exists</h2>
-    <p>Founded in ${site.founded} at the suggestion of Chickasha City Manager Larry Shelton, the foundation is governed by a board appointed by five of the state's municipal associations. It keeps the record of those who led well, so their example can guide the people who lead next.</p>
-    <a class="more" href="${u("/history/")}">Read the history</a>
-  </div>
-  <div>
-    <h2>Latest news</h2>
-    <ul class="news-mini">${site.news.slice(0, 3).map((n) => `<li><a href="${esc(n.url)}">${esc(n.title)}</a><span>${esc(n.label)} (PDF)</span></li>`).join("")}</ul>
-  </div>
+  <div class="band-action"><a class="button" href="${u("/nominate/")}">How to nominate</a></div>
 </div></section>`;
   write("index.html", layout({
     title: "", path: "/", body, bodyClass: "home",
